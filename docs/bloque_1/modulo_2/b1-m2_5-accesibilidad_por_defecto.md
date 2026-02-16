@@ -1,0 +1,1 @@
+# Accesibilidad por defecto
