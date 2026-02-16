@@ -1,0 +1,1 @@
+# Inicio Módulo 7: El cerebro de la UI (MVVM & StateFlow)
