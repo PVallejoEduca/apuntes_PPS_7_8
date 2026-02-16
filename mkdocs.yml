@@ -18,6 +18,7 @@ theme:
     - search.highlight # Resalta el texto buscado dentro de la página
     - content.code.copy # Esencial: Botón nativo para copiar los bloques de código
     - content.code.annotate # Permite añadir explicaciones con un "+" dentro del código
+    - navigation.indexes # Permite las páginas a nivel de módulo para luego hacer subpaginas de 3º nivel
 
   # Paleta de colores (Estilo Android con modo claro/oscuro)
   palette:
@@ -73,42 +74,278 @@ nav:
   - Inicio: index.md
   - Guía de Referencia: guia.md
   
-  # Al poner un título y anidar páginas debajo, este título se convierte 
-  # en una pestaña en la BARRA SUPERIOR.
-  - 'Bloque 1: Los Cimientos':
+    ########################
+    ########################
+    #####   Bloque 1   #####
+    ########################
+    ########################
+  - 'Los Cimientos':
       # Estas páginas SOLO aparecerán en el MENÚ LATERAL cuando el 
       # alumno haga clic en la pestaña "Bloque 1" arriba.
-      - Módulo 0 - El Ecosistema Android (Entorno y Compilación): bloque_1/modulo_0.md
-      - Módulo 1 - Kotlin para supervivientes de Java: bloque_1/modulo_1.md
-      - Módulo 2 - Compose Essentials: bloque_1/modulo_2.md
-      - Módulo 3 - El Estado (State Management): bloque_1/modulo_3.md
+      - 'Presentación Bloque 1: Los Cimientos': bloque_1/b1-inicio.md
       
-  - 'Bloque 2: UI Profesional y Navegación':
-      - Módulo 4 - Recursos, Assets e Internacionalización: bloque_2/modulo_4.md
-      - Módulo 5 - Listas y Material Design 3: bloque_2/modulo_5.md
-      - Módulo 6 - Navegación (Type-Safe): bloque_2/modulo_6.md
+      # Módulo 0
+      - El Ecosistema Android (Entorno y Compilación):
+          - bloque_1/modulo_0/b1-m0-inicio.md
+          - 'Versiones de Android (API Lveles)': bloque_1/modulo_0/b1-m0_1-versiones_android.md
+          - 'El Motor (Gradle y AGP)': bloque_1/modulo_0/b1-m0_2-motor_gradle_agp.md
+          - 'Procesamiento de Anotaciones (KSP vs KAPT)': bloque_1/modulo_0/b1-m0_3-anotaciones_ksp_kapt.md
+          - 'Fin Módulo 0: El Ecosistema Android (Entorno y Compilación)': bloque_1/modulo_0/b1-m0-fin.md
       
-  - 'Bloque 3: Arquitectura, Redes y Datos':
-      - Módulo 7 - El cerebro de la UI (MVVM & StateFlow): bloque_3/modulo_7.md
-      - Módulo 8 - Efectos y Asincronía: bloque_3/modulo_8.md
-      - Módulo 9 - Conectividad HTTP (Consumo de APIs REST): bloque_3/modulo_9.md
-      - Módulo 10 - Persistencia Local: bloque_3/modulo_10.md
-      - Módulo 11 - Arquitectura Profesional (Clean + DI): bloque_3/modulo_11.md
+      # Módulo 1
+      - Kotlin para supervivientes de Java:
+          - bloque_1/modulo_1/b1-m1-inicio.md
+          - 'Val vs Var & Null Safety': bloque_1/modulo_1/b1-m1_1-val_var_null_safety.md
+          - 'Data Classes & Lambdas': bloque_1/modulo_1/b1-m1_2-data_class_lambdas.md
+          - 'Extension Functions': bloque_1/modulo_1/b1-m1_3-extension_functions.md
+          - 'Colecciones Modernas': bloque_1/modulo_1/b1-m1_4-colecciones_modernas.md
+          - 'Corrutinas Básicas': bloque_1/modulo_1/b1-m1_5-corrutinas_basicas.md
+          - 'Fin Módulo 1: Kotlin para supervivientes de Java': bloque_1/modulo_1/b1-m1-fin.md
       
-  - 'Bloque 4: Integración Cloud y Background (Firebase)':
-      - Módulo 12 - Backend as a Service (Firebase): bloque_4/modulo_12.md
-      - Módulo 13 - Tareas en Segundo Plano y Notificaciones: bloque_4/modulo_13.md
-      - Módulo 14 - Firebase Storage: bloque_4/modulo_14.md
+      # Módulo 2
+      - Compose Essentials:
+          - bloque_1/modulo_2/b1-m2-inicio.md
+          - 'Hola Compose': bloque_1/modulo_2/b1-m2_1-hola_compose.md
+          - 'Layouts Primitivos': bloque_1/modulo_2/b1-m2_2-layouts_primitivos.md
+          - 'Modifiers (La Magia)': bloque_1/modulo_2/b1-m2_3-modifiers.md
+          - 'Preview & Tooling': bloque_1/modulo_2/b1-m2_4-preview_tooling.md
+          - 'Accesibilidad por defecto': bloque_1/modulo_2/b1-m2_5-accesibilidad_por_defecto.md
+          - 'Fin Módulo 2: Compose Essentials': bloque_1/modulo_2/b1-m2-fin.md
       
-  - 'Bloque 5: Hardware y Sensores':
-      - Módulo 15 - Gestión Centralizada de Permisos: bloque_5/modulo_15.md
-      - Módulo 16 - Cámara y Galería: bloque_5/modulo_16.md
-      - Módulo 17 - Reproducción Multimedia (Audio y Vídeo): bloque_5/modulo_17.md
-      - Módulo 18 - Localización y Mapas: bloque_5/modulo_18.md
-      - Módulo 19 - Sensores y Hardware Diverso: bloque_5/modulo_19.md
-      - Módulo 20 - Conectividad Bluetooth (BLE): bloque_5/modulo_20.md
+      # Módulo 3
+      - El Estado (State Management):
+          - bloque_1/modulo_3/b1-m3-inicio.md
+          - 'La Recomposición': bloque_1/modulo_3/b1-m3_1-recomposicion.md
+          - 'Memoria de UI (remember y mutableState)': bloque_1/modulo_3/b1-m3_2-memoria_ui.md
+          - 'State Hoisting (Elevación)': bloque_1/modulo_3/b1-m3_3-state_hoisting.md
+          - 'Inputs y Eventos': bloque_1/modulo_3/b1-m3_4-inputs_eventos.md
+          - 'Fin Módulo 3: El Estado (State Management)': bloque_1/modulo_3/b1-m3-fin.md
       
-  - 'Bloque 6: Calidad y Despliegue':
-      - Módulo 21 - Testing y Depuración (Quality Assurance): bloque_6/modulo_21.md
-      - Módulo 22 - Publicación y Mantenimiento (DevOps): bloque_6/modulo_22.md
+      - 'Fin Bloque 1: Los Cimientos': bloque_1/b1-fin.md
+      
+    ########################
+    ########################
+    #####   Bloque 2   #####
+    ########################
+    ########################
+  - 'UI Profesional y Navegación':
+      - 'Presentación Bloque 2: UI Profesional y Navegación': bloque_2/b2-inicio.md
+      
+      # Módulo 4
+      - Recursos, Assets e Internacionalización:
+          - bloque_2/modulo_4/b2-m5-inicio.md
+          - 'Vectores vs Bitmaps': bloque_2/modulo_4/b2-m4_1-vectores_bitmaps.md
+          - 'Importación y Vectorización': bloque_2/modulo_4/b2-m4_1-importacion_vectorizacion.md
+          - 'Iconos de la App (Adaptive Icons)': bloque_2/modulo_4/b2-m4_1-adaptative_icons.md
+          - 'Fuentes Personalizadas': bloque_2/modulo_4/b2-m4_1-fuentes_personalizadas.md
+          - 'Apps Multidioma (i18n)': bloque_2/modulo_4/b2-m4_1-apps_multiidioma.md
+          - 'Fin Módulo 4: Recursos, Assets e Internacionalización': bloque_2/modulo_4/b2-m4-fin.md
+      
+      # Módulo 5
+      - Listas y Material Design 3:
+          - bloque_2/modulo_5/b2-m5-inicio.md
+          - 'Listas Eficientes': bloque_2/modulo_5/b2-m5_1-listas_eficientes.md
+          - 'Grids': bloque_2/modulo_5/b2-m5_2-grids.md
+          - 'Carga de Imágenes': bloque_2/modulo_5/b2-m5_3-carga_imagenes.md
+          - 'Material Theming y Componentes': bloque_2/modulo_5/b2-m5_4-material_theming_componentes.md
+          - 'Indicadores de carga modernos': bloque_2/modulo_5/b2-m5_5-indicadores_carga.md
+          - 'Animaciones en Compose': bloque_2/modulo_5/b2-m5_6-animaciones_compose.md
+          - 'Pantallas Flexibles': bloque_2/modulo_5/b2-m5_7-pantallas_flexibles.md
+          - 'Fin Módulo 5: Listas y Material Design 3': bloque_2/modulo_5/b2-m5-fin.md
+      
+      # Módulo 6
+      - Navegación (Type-Safe):
+          - bloque_2/modulo_6/b2-m6-inicio.md
+          - 'El Grafo de Navegación': bloque_2/modulo_6/b2-m6_1-grafo_navegacion.md
+          - 'Rutas Tipadas (Serializable)': bloque_2/modulo_6/b2-m6_2-rutas_tipadas.md
+          - 'Paso de Argumentos': bloque_2/modulo_6/b2-m6_3-paso_argumentos.md
+          - 'UI de Navegación': bloque_2/modulo_6/b2-m6_4-ui_navegacion.md
+          - 'Fin Módulo 6: Navegación (Type-Safe)': bloque_2/modulo_6/b2-m6-fin.md
+      
+      - 'Fin Bloque 2: UI Profesional y Navegación': bloque_2/b2-fin.md
+      
+    ########################
+    ########################
+    #####   Bloque 3   #####
+    ########################
+    ########################
+  - 'Arquitectura, Redes y Datos':
+      - 'Presentación Bloque 3: Arquitectura, Redes y Datos': bloque_3/b3-inicio.md
+      
+      # Módulo 7
+      - El cerebro de la UI (MVVM & StateFlow):
+          - bloque_3/modulo_7/b3-m7-inicio.md
+          - 'El ViewModel': bloque_3/modulo_7/b3-m7_1-view_model.md
+          - 'StateFlow & UI State': bloque_3/modulo_7/b3-m7_2-state_flow_ui_state.md
+          - 'Consumo en Compose': bloque_3/modulo_7/b3-m7_3-consumo_compose.md
+          - 'Flujo Unidireccional': bloque_3/modulo_7/b3-m7_4-flujo_unidireccional.md
+          - 'Fin Módulo 7: El cerebro de la UI (MVVM & StateFlow)': bloque_3/modulo_7/b3-m7-fin.md
+      
+      # Módulo 8
+      - Efectos y Asincronía:
+          - bloque_3/modulo_8/b3-m8-inicio.md
+          - 'Side Effects': bloque_3/modulo_8/b3-m8_1-side_effects.md
+          - 'LaunchedEffect': bloque_3/modulo_8/b3-m8_2-launched_effect.md
+          - 'Corrutinas en UI': bloque_3/modulo_8/b3-m8_3-corrutinas_ui.md
+          - 'DisposableEffect': bloque_3/modulo_8/b3-m8_4-disposable_effect.md
+          - 'Fin Módulo 8: Efectos y Asincronía': bloque_3/modulo_8/b3-m8-fin.md
+      
+      # Módulo 9
+      - Conectividad HTTP (Consumo de APIs REST):
+          - bloque_3/modulo_9/b3-m8-inicio.md
+          - 'Cliente HTTP (Ktor/Retrofit)': bloque_3/modulo_9/b3-m8_1-cliente_http.md
+          - 'Parsing JSON': bloque_3/modulo_9/b3-m8_2-parsing_json.md
+          - 'Repositorio de Red': bloque_3/modulo_9/b3-m8_3-repositorio_red.md
+          - 'Gestión de Errores': bloque_3/modulo_9/b3-m8_4-gestion_errores.md
+          - 'Fin Módulo 9: Conectividad HTTP (Consumo de APIs REST)': bloque_3/modulo_9/b3-m8-fin.md
+      
+      # Módulo 10
+      - Persistencia Local:
+          - bloque_3/modulo_10/b3-m10-inicio.md
+          - 'DataStore': bloque_3/modulo_10/b3-m10_1-datastore.md
+          - 'Room': bloque_3/modulo_10/b3-m10_2-room.md
+          - 'Relaciones': bloque_3/modulo_10/b3-m10_3-relaciones.md
+          - 'Reactividad': bloque_3/modulo_10/b3-m10_4-Reactividad.md
+          - 'Fin Módulo 10: Persistencia Local': bloque_3/modulo_10/b3-m10-fin.md
+      
+      # Módulo 11
+      - Arquitectura Profesional (Clean Arquitecture + DI):
+          - bloque_3/modulo_11/b3-m11-inicio.md
+          - 'Clean Architecture': bloque_3/modulo_11/b3-m11_1-clean_architecture.md
+          - 'Pattern Repository': bloque_3/modulo_11/b3-m11_2-pattern_repository.md
+          - 'Inyección de Dependencias (Hilt)': bloque_3/modulo_11/b3-m11_3-inyeccion_dependencias.md
+          - 'Módulos DI': bloque_3/modulo_11/b3-m11_4-modulos_di.md
+          - 'Fin Módulo 11: Arquitectura Profesional (Clean Arquitecture + DI)': bloque_3/modulo_11/b3-m11-fin.md
+      
+      - 'Fin Bloque 3: Arquitectura, Redes y Datos': bloque_3/b3-fin.md
+      
+    ########################
+    ########################
+    #####   Bloque 4   #####
+    ########################
+    ########################
+  - 'Integración Cloud y Background':
+      - 'Presentación Bloque 4: Integración Cloud y Background': bloque_4/b4-inicio.md
+      
+      # Módulo 12
+      - Backend as a Service (Firebase):
+          - bloque_4/modulo_12/b4-m12-inicio.md
+          - 'Setup y Console': bloque_4/modulo_12/b4-m12_1-setup_console.md
+          - 'Authentication': bloque_4/modulo_12/b4-m12_2-authentication.md
+          - 'Firestore': bloque_4/modulo_12/b4-m12_3-firestore.md
+          - 'Storage': bloque_4/modulo_12/b4-m12_4-storage.md
+          - 'Fin Módulo 12: Backend as a Service (Firebase)': bloque_4/modulo_12/b4-m12-fin.md
+      
+      # Módulo 13
+      - Tareas en Segundo Plano y Notificaciones:
+          - bloque_4/modulo_13/b4-m13-inicio.md
+          - 'Notificaciones Locales': bloque_4/modulo_13/b4-m13_1-notificaciones_locales.md
+          - 'Notificaciones Push (FCM)': bloque_4/modulo_13/b4-m13_2-notificaciones_push.md
+          - 'WorkManager': bloque_4/modulo_13/b4-m13_3-workmanager.md
+          - 'Receptores (BroadcastReceivers)': bloque_4/modulo_13/b4-m13_4-receptores.md
+          - 'Fin Módulo 13: Tareas en Segundo Plano y Notificaciones': bloque_4/modulo_13/b4-m13-fin.md
+      
+      # Módulo 14
+      - Inteligencia Artificial Aplicada (Gemini API):
+          - bloque_4/modulo_14/b4-m14-inicio.md
+          - 'El ecosistema IA en Android': bloque_4/modulo_14/b4-m14_1-ia_android.md
+          - 'Seguridad y Setup': bloque_4/modulo_14/b4-m14_2-seguridad_setup.md
+          - 'Práctica Generación de Texto con IA': bloque_4/modulo_14/b4-m14_3-p_generacion_texto.md
+          - 'Práctica Multimodal (Visión) con IA': bloque_4/modulo_14/b4-m14_4-p_multimodal_vision.md
+          - 'Fin Módulo 14: Inteligencia Artificial Aplicada (Gemini API)': bloque_4/modulo_14/b4-m14-fin.md
+      
+      - 'Fin Bloque 4: Integración Cloud y Background': bloque_4/b4-fin.md
+      
+    ########################
+    ########################
+    #####   Bloque 5   #####
+    ########################
+    ########################
+  - 'Hardware y Sensores':
+      - 'Presentación Bloque 5: Hardware y Sensores': bloque_5/b5-inicio.md
+      
+      # Módulo 15
+      - Gestión Centralizada de Permisos:
+          - bloque_5/modulo_15/b5-m15-inicio.md
+          - 'El modelo de Permisos de Android': bloque_5/modulo_15/b5-m15_1-permisos_android.md
+          - 'Accompanist / API Nativa en Compose': bloque_5/modulo_15/b5-m15_2-accompanist_api_nativa.md
+          - 'Rationale (La explicación)': bloque_5/modulo_15/b5-m15_3-rationale.md
+          - 'Manejo de denegaciones': bloque_5/modulo_15/b5-m15_4-manejo_denegaciones.md
+          - 'Fin Módulo 15: Gestión Centralizada de Permisos': bloque_5/modulo_15/b5-m15-fin.md
+      
+      # Módulo 16
+      - Cámara y Galería:
+          - bloque_5/modulo_16/b5-m16-inicio.md
+          - 'Photo Picker': bloque_5/modulo_16/b5-m16_1-photo_picker.md
+          - 'CameraX': bloque_5/modulo_16/b5-m16_2-camerax.md
+          - 'Recorte y edición Básica': bloque_5/modulo_16/b5-m16_3-_recorte_edicion_basica.md
+          - 'Manejo de URIs y FileProvider': bloque_5/modulo_16/b5-m16_4-manejo_uris_fileprovider.md
+          - 'Fin Módulo 16: Cámara y Galería': bloque_5/modulo_16/b5-m16-fin.md
+      
+      # Módulo 17
+      - Reproducción Multimedia (Audio y Vídeo):
+          - bloque_5/modulo_17/b5-m17-inicio.md
+          - 'Efectos de Sonido Básicos': bloque_5/modulo_17/b5-m17_1-efectos_sonido_basicos.md
+          - 'El Estándar Moderno (Media3 / ExoPlayer)': bloque_5/modulo_17/b5-m17_2-estandar_moderno.md
+          - 'Integración de YouTube': bloque_5/modulo_17/b5-m17_3-integracion_youtube.md
+          - 'Reproducción en Segundo Plano': bloque_5/modulo_17/b5-m17_4-reproduccion_segundo_plano.md
+          - 'Fin Módulo 17: Reproducción Multimedia (Audio y Vídeo)': bloque_5/modulo_17/b5-m17-fin.md
+      
+      # Módulo 18
+      - Localización y Mapas:
+          - bloque_5/modulo_18/b5-m18-inicio.md
+          - 'Integración de Permisos de Ubicación': bloque_5/modulo_18/b5-m18_1-integracion_permisos_ubicacion.md
+          - 'FusedLocationProvider': bloque_5/modulo_18/b5-m18_2-fused_location_provider.md
+          - 'Google Maps Compose': bloque_5/modulo_18/b5-m18_3-google_maps_compose.md
+          - 'Pintando el Mapa': bloque_5/modulo_18/b5-m18_4-pintando_mapa.md
+          - 'Fin Módulo 18: Localización y Mapas': bloque_5/modulo_18/b5-m18-fin.md
+      
+      # Módulo 19
+      - Sensores y Hardware Diverso:
+          - bloque_5/modulo_19/b5-m19-inicio.md
+          - 'Sensores Físicos': bloque_5/modulo_19/b5-m19_1-sensores_fisicos.md
+          - 'Sensores Ambientales': bloque_5/modulo_19/b5-m19_2-sensores_ambientales.md
+          - 'Biometría': bloque_5/modulo_19/b5-m19_3-biometria.md
+          - 'Linterna y Vibración': bloque_5/modulo_19/b5-m19_4-linterna_vibracion.md
+          - 'Fin Módulo 19: Sensores y Hardware Diverso': bloque_5/modulo_19/b5-m19-fin.md
+      
+      # Módulo 20
+      - Conectividad Bluetooth (BLE):
+          - bloque_5/modulo_20/b5-m20-inicio.md
+          - 'El Infierno de los Permisos': bloque_5/modulo_20/b5-m20_1-infierno_permisos.md
+          - 'Escaneo de Dispositivos': bloque_5/modulo_20/b5-m20_2-escaneo_dispositivos.md
+          - 'Conexión GATT': bloque_5/modulo_20/b5-m20_3-conexion_gatt.md
+          - 'Fin Módulo 20: Conectividad Bluetooth (BLE)': bloque_5/modulo_20/b5-m20-fin.md
+      
+      - 'Fin Bloque 5: Hardware y Sensores': bloque_5/b5-fin.md
+      
+    ########################
+    ########################
+    #####   Bloque 6   #####
+    ########################
+    ########################
+  - 'Calidad y Despliegue':
+      - 'Presentación Bloque 6: Calidad y Despliegue': bloque_6/b6-inicio.md
+      
+      # Módulo 21
+      - Testing y Depuración (Quality Assurance):
+          - bloque_6/modulo_21/b6-m21-inicio.md
+          - 'Unit Testing (Lógica)': bloque_6/modulo_21/b6-m21_1-unit_testing.md
+          - 'UI Testing (Compose)': bloque_6/modulo_21/b6-m21_2-ui_testing.md
+          - 'Herramientas de Debugging': bloque_6/modulo_21/b6-m21_3-herramientas_debugging.md
+          - 'Monitorización de Crashes': bloque_6/modulo_21/b6-m21_4-monitorizacion_crashes.md
+          - 'Fin Módulo 21: ing y Depuración (Quality Assurance)': bloque_6/modulo_21/b6-m21-fin.md
+      
+      # Módulo 22
+      - Publicación y Mantenimiento (DevOps):
+          - bloque_6/modulo_22/b6-m22-inicio.md
+          - 'Configuración de Gradle (KTS)': bloque_6/modulo_22/b6-m22_1-gradle_kts.md
+          - 'Seguridad y Optimización (ProGuard/R8)': bloque_6/modulo_22/b6-m22_2-seguridad_optimizacion.md
+          - 'Firmado Digital': bloque_6/modulo_22/b6-m22_3-firmado_digital.md
+          - 'Google Play Console': bloque_6/modulo_22/b6-m22_4-google_play_console.md
+          - 'Fin Módulo 22: Publicación y Mantenimiento (DevOps)': bloque_6/modulo_22/b6-m22-fin.md
+      
+      - 'Fin Bloque 6: Calidad y Despliegue': bloque_6/b6-fin.md
+
+
 
