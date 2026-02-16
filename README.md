@@ -9,10 +9,12 @@ La web está creada con Python mkdocs-material. Las carpetas bases de el proyect
 
 Para arrancar el servidor web en local lanzar:
     - .\venv\Scripts\activate
-    - mkdocs serve --watch docs
+    - mkdocs serve
     - Arranca el servidor local en: http://localhost:8000/
 
-
-También he instalado watchdog para que capture los eventos de guardado sobre los ficheros md y actualice el servidor automáticamente: pip install watchdog
-
-
+> **Solución a problemas de Live Reload (Refresco automático):**
+> Si el navegador no se actualiza al guardar los cambios:
+> 1. Asegúrate de tener **watchdog** instalado: `pip install watchdog`
+> 2. **En Windows:** A menudo es necesario instalar `pywin32` para que detecte bien los cambios: `pip install pywin32`
+> 3. **Reinicia el servidor** (`Ctrl+C` y `mkdocs serve`) tras instalar estas librerías.
+> 4. **Nota para Android Studio/IntelliJ:** Si usas estos editores, debes desactivar la opción *"Use safe write"* en *Settings > System Settings*.
