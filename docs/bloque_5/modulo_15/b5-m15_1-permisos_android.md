@@ -1,0 +1,1 @@
+# El modelo de Permisos de Android
