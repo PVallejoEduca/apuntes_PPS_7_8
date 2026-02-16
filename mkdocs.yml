@@ -2,6 +2,7 @@ site_name: Tutorial de Desarrollo Android con Jetpack Compose
 site_description: Apuntes prácticos de desarrollo Android con Jetpack Compose
 site_author: Mikel Aingeru Jorge Soteras
 copyright: "Materiales creados por Mikel Aingeru Jorge Soteras  ©  2026"
+site_url: https://mikel-jorge.github.io/Android-Jetpack_Compose_Tutorial/
 
 # Configuración del tema Material Design
 theme:
