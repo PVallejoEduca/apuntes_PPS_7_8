@@ -1,6 +1,7 @@
 site_name: Tutorial de Desarrollo Android con Jetpack Compose
 site_description: Apuntes prácticos de desarrollo Android con Jetpack Compose
 site_author: Mikel Aingeru Jorge Soteras
+copyright: "Materiales creados por Mikel Aingeru Jorge Soteras  ©  2026"
 
 # Configuración del tema Material Design
 theme:
@@ -51,3 +52,19 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite # Resalta código dentro de un párrafo de texto
   - pymdownx.snippets # Permite incrustar código de archivos .kt o .xml externos
+  - pymdownx.tasklist: # Permite hacer listas de tareas mediante [x] y []
+        custom_checkbox: true
+  - md_in_html # Habilita que MKDocs procese Markdown dentro de etiquetas HTML
+  - attr_list # Permite añadir listas de atributos para inyectar CSS (clases y estilos) a cualquier elemento Markdown
+
+# Importar mi propio CSS y JS
+extra_css:
+  - css/extra.css
+
+extra_javascript:
+  - js/extra.js
+
+# control de la navegación
+nav:
+  - Inicio: index.md
+  - Guía de Referencia: guia.md
