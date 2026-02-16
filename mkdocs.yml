@@ -68,3 +68,47 @@ extra_javascript:
 nav:
   - Inicio: index.md
   - Guía de Referencia: guia.md
+
+nav:
+  - Inicio: index.md
+  - Guía de Referencia: guia.md
+  
+  # Al poner un título y anidar páginas debajo, este título se convierte 
+  # en una pestaña en la BARRA SUPERIOR.
+  - 'Bloque 1: Los Cimientos':
+      # Estas páginas SOLO aparecerán en el MENÚ LATERAL cuando el 
+      # alumno haga clic en la pestaña "Bloque 1" arriba.
+      - Módulo 0 - El Ecosistema Android (Entorno y Compilación): bloque_1/modulo_0.md
+      - Módulo 1 - Kotlin para supervivientes de Java: bloque_1/modulo_1.md
+      - Módulo 2 - Compose Essentials: bloque_1/modulo_2.md
+      - Módulo 3 - El Estado (State Management): bloque_1/modulo_3.md
+      
+  - 'Bloque 2: UI Profesional y Navegación':
+      - Módulo 4 - Recursos, Assets e Internacionalización: bloque_2/modulo_4.md
+      - Módulo 5 - Listas y Material Design 3: bloque_2/modulo_5.md
+      - Módulo 6 - Navegación (Type-Safe): bloque_2/modulo_6.md
+      
+  - 'Bloque 3: Arquitectura, Redes y Datos':
+      - Módulo 7 - El cerebro de la UI (MVVM & StateFlow): bloque_3/modulo_7.md
+      - Módulo 8 - Efectos y Asincronía: bloque_3/modulo_8.md
+      - Módulo 9 - Conectividad HTTP (Consumo de APIs REST): bloque_3/modulo_9.md
+      - Módulo 10 - Persistencia Local: bloque_3/modulo_10.md
+      - Módulo 11 - Arquitectura Profesional (Clean + DI): bloque_3/modulo_11.md
+      
+  - 'Bloque 4: Integración Cloud y Background (Firebase)':
+      - Módulo 12 - Backend as a Service (Firebase): bloque_4/modulo_12.md
+      - Módulo 13 - Tareas en Segundo Plano y Notificaciones: bloque_4/modulo_13.md
+      - Módulo 14 - Firebase Storage: bloque_4/modulo_14.md
+      
+  - 'Bloque 5: Hardware y Sensores':
+      - Módulo 15 - Gestión Centralizada de Permisos: bloque_5/modulo_15.md
+      - Módulo 16 - Cámara y Galería: bloque_5/modulo_16.md
+      - Módulo 17 - Reproducción Multimedia (Audio y Vídeo): bloque_5/modulo_17.md
+      - Módulo 18 - Localización y Mapas: bloque_5/modulo_18.md
+      - Módulo 19 - Sensores y Hardware Diverso: bloque_5/modulo_19.md
+      - Módulo 20 - Conectividad Bluetooth (BLE): bloque_5/modulo_20.md
+      
+  - 'Bloque 6: Calidad y Despliegue':
+      - Módulo 21 - Testing y Depuración (Quality Assurance): bloque_6/modulo_21.md
+      - Módulo 22 - Publicación y Mantenimiento (DevOps): bloque_6/modulo_22.md
+
