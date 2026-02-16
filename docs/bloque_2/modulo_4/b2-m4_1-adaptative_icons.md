@@ -1,0 +1,1 @@
+# Iconos de la App (Adaptive Icons)

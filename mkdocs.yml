@@ -133,7 +133,7 @@ nav:
       
       # Módulo 4
       - Recursos, Assets e Internacionalización:
-          - bloque_2/modulo_4/b2-m5-inicio.md
+          - bloque_2/modulo_4/b2-m4-inicio.md
           - 'Vectores vs Bitmaps': bloque_2/modulo_4/b2-m4_1-vectores_bitmaps.md
           - 'Importación y Vectorización': bloque_2/modulo_4/b2-m4_1-importacion_vectorizacion.md
           - 'Iconos de la App (Adaptive Icons)': bloque_2/modulo_4/b2-m4_1-adaptative_icons.md
