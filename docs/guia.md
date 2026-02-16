@@ -16,7 +16,7 @@ Recuerda que al ser archivos Markdown, puedes pegar código HTML puro con ```<st
 Para enlazar a otras páginas de nuestros apuntes, usamos rutas relativas. Es mucho mejor que usar URLs absolutas, ya que funcionará tanto en local como al subirlo a GitHub Pages.
 
 * [Volver a la página de Inicio](index.md)
-* [Ir a un apartado específico del Inicio](index.md#titulo-del-apartado)
+* [Ir a un apartado específico del Inicio](index.md#navegacion)
 
 ---
 
@@ -25,19 +25,19 @@ Para enlazar a otras páginas de nuestros apuntes, usamos rutas relativas. Es mu
 Son perfectos para destacar información vital y romper la monotonía del texto. Hay varios colores por defecto según la gravedad o el tipo de nota.
 
 !!! note "Nota informativa"
-    Usa esto para dar contexto extra o aclaraciones. Fíjate que el contenido va indentado con 4 espacios.
+	Usa esto para dar contexto extra o aclaraciones. Fíjate que el contenido va indentado con 4 espacios.
 
 !!! tip "Consejo práctico"
-    Ideal para atajos de Android Studio o buenas prácticas de código.
+	Ideal para atajos de Android Studio o buenas prácticas de código.
 
 !!! warning "Cuidado con esto"
-    Perfecto para avisar de errores comunes (ej. olvidar declarar un permiso en el *Manifest*).
+	Perfecto para avisar de errores comunes (ej. olvidar declarar un permiso en el *Manifest*).
 
 !!! danger "Peligro / Deprecation"
-    Útil para marcar métodos obsoletos o acciones que rompen la compilación.
+	Útil para marcar métodos obsoletos o acciones que rompen la compilación.
 
 ??? example "Ejemplo desplegable (¡Haz clic para abrir!)"
-    Si tienes un texto muy largo o la solución a un ejercicio de clase, puedes usar `???` en lugar de `!!!` para que el bloque aparezca cerrado por defecto y no sature la pantalla.
+	Si tienes un texto muy largo o la solución a un ejercicio de clase, puedes usar `???` en lugar de `!!!` para que el bloque aparezca cerrado por defecto y no sature la pantalla.
 
 ---
 
@@ -46,20 +46,20 @@ Son perfectos para destacar información vital y romper la monotonía del texto.
 Vital para comparar tecnologías o lenguajes. El alumnado puede cambiar de pestaña sin recargar la página.
 
 === "Jetpack Compose"
-    ```kotlin
-    @Composable
-    fun Saludo() {
-        Text(text = "¡Hola, mundo!")
-    }
-    ```
+	```kotlin
+	@Composable
+	fun Saludo() {
+		Text(text = "¡Hola, mundo!")
+	}
+	```
 
 === "XML Clásico"
-    ```xml
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="¡Hola, mundo!" />
-    ```
+	```xml
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="¡Hola, mundo!" />
+	```
 
 ---
 
@@ -69,14 +69,14 @@ En lugar de poner comentarios larguísimos dentro del código, podemos añadir u
 
 ```kotlin
 class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent { // (1)!
-            MiAppTheme { // (2)!
-                Saludo()
-            }
-        }
-    }
+	override fun onCreate(savedInstanceState: Bundle?) {
+		super.onCreate(savedInstanceState)
+		setContent { // (1)!
+			MiAppTheme { // (2)!
+				Saludo()
+			}
+		}
+	}
 }
 ```
 
@@ -91,16 +91,16 @@ Para mantener el proyecto organizado, lo ideal es crear una carpeta `assets` o `
 
 **Añadir una imagen con pie de foto:**
 <figure markdown="span">
-  ![Esquema del Ciclo de Vida](assets/ejemplo.jpg)
-  <figcaption>Figura 1: Representación gráfica del ciclo de vida de un Activity.</figcaption>
+	![Esquema del Ciclo de Vida](assets/ejemplo.jpg)
+	<figcaption>Figura 1: Representación gráfica del ciclo de vida de un Activity.</figcaption>
 </figure>
 
 
 
 **Añadir un GIF animado (funciona exactamente igual):**
 <figure markdown="span">
-  ![Demostración de la animación en Compose](assets/gif.gif)
-  <figcaption>GIF 1: Resultado visual tras aplicar el modificador `animateContentSize`.</figcaption>
+	![Demostración de la animación en Compose](assets/gif.gif)
+	<figcaption>GIF 1: Resultado visual tras aplicar el modificador `animateContentSize`.</figcaption>
 </figure>
 
 

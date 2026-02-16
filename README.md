@@ -9,7 +9,7 @@ La web está creada con Python mkdocs-material. Las carpetas bases de el proyect
 
 Para arrancar el servidor web en local lanzar:
     - .\venv\Scripts\activate
-    - mkdocs serve
+    - mkdocs serve --livereload
     - Arranca el servidor local en: http://localhost:8000/
 
 > **Solución a problemas de Live Reload (Refresco automático):**

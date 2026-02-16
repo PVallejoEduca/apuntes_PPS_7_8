@@ -19,7 +19,7 @@ theme:
     - content.code.copy # Esencial: Botón nativo para copiar los bloques de código
     - content.code.annotate # Permite añadir explicaciones con un "+" dentro del código
     - navigation.indexes # Permite las páginas a nivel de módulo para luego hacer subpaginas de 3º nivel
-
+  
   # Paleta de colores (Estilo Android con modo claro/oscuro)
   palette:
     # Modo Claro

@@ -1,20 +1,12 @@
 /* docs/stylesheets/extra.css */
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* Elimino el margen superior de los figcation para que estén más cercanos a la imagen */
 .md-typeset figcaption { margin-top: 0; }
 
+/* Ocultar la primeras pestaña superiores (Inicio) */
+.md-tabs__list li:nth-child(1) {
+    display: none !important;
+}
 
 /***************************************/
 /* Estilos extras ofrecidos por Gemini */

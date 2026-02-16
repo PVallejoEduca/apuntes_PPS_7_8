@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 # Inicio
 
 Bienvenido al Tutorial de Desarrollo Android con Jetpack Compose.
