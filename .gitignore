@@ -1,0 +1,48 @@
+# ========================================
+# 1. MkDocs y Entorno Python
+# ========================================
+# Excluye la web compilada (se sube a gh-pages, no a main)
+site/
+# Excluye tu entorno virtual local
+venv/
+# Cachés de Python
+__pycache__/
+*.pyc
+
+# ========================================
+# 2. Android Studio y Gradle (Recursivo)
+# ========================================
+# Carpetas de compilación (pesan muchísimo y se autogeneran)
+build/
+.gradle/
+.cxx/
+.externalNativeBuild/
+captures/
+
+# Archivos de configuración local (¡Vital excluirlo!)
+# Contiene la ruta del SDK de tu máquina, si lo subes romperás 
+# la compilación a los alumnos que clonen el repo.
+local.properties
+
+# Archivos de configuración del IDE (Android Studio)
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# ========================================
+# 3. Seguridad y Firmas
+# ========================================
+# Nunca subir claves de firma de aplicaciones
+*.jks
+*.keystore
+*.p8
+*.p12
+*.key
+*.pem
+
+# ========================================
+# 4. Basura del Sistema Operativo
+# ========================================
+.DS_Store
+Thumbs.db
