@@ -11,6 +11,9 @@ Para arrancar el servidor web en local lanzar:
     - .\venv\Scripts\activate
     - mkdocs serve --livereload
     - Arranca el servidor local en: http://localhost:8000/
+    Generar página web:
+    - .\venv\Scripts\activate
+    - mkdocs gh-deploy
 
 > **Solución a problemas de Live Reload (Refresco automático):**
 > Si el navegador no se actualiza al guardar los cambios:
