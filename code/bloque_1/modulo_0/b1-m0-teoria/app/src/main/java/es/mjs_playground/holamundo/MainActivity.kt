@@ -28,6 +28,15 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+
+    fun test() {
+        var correo: String? = null
+
+        // En Kotlin, el Safe Call lo hace en dos caracteres:
+        val longitud = correo.length
+
+        println(longitud) // Imprime: null
+    }
 }
 
 @Composable

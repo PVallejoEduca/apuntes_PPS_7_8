@@ -94,6 +94,6 @@ Para prepararlo, solo tienes que seguir estos pasos:
 
 ---
 
-<div align="right" markdown="span">
+<div align="right" markdown="span" style="margin-top: 2rem;">
   [Tu Primer Proyecto (Estructura de Carpetas) ➡️](b1-m0_2-primer_proyecto.md){: .md-button .md-button--primary }
 </div>
