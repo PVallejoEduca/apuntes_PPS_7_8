@@ -8,6 +8,71 @@
     display: none !important;
 }
 
+/* =========================================
+   1. MENÚ DE NAVEGACIÓN LATERAL (MÓDULOS)
+   ========================================= */
+
+/* Destacar los títulos de los módulos en el menú lateral */
+.md-nav--primary .md-nav__item--section > .md-nav__title, 
+.md-nav--primary .md-nav__item--section > .md-nav__link {
+    font-weight: 700; /* Letra en negrita */
+    color: var(--md-primary-fg-color); /* Usa el color principal del tema (verde en tu caso) */
+    text-transform: uppercase; /* Mayúsculas para darle más peso de "bloque" */
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    
+    /* Línea de separación superior */
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--md-default-fg-color--lighter);
+}
+
+/* Quitar la línea separadora al primer elemento del menú para evitar que quede huérfana */
+.md-nav--primary > ul > li.md-nav__item--section:first-child > .md-nav__title,
+.md-nav--primary > ul > li.md-nav__item--section:first-child > .md-nav__link {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+/* =========================================
+   2. JERARQUÍA DE TÍTULOS (H1, H2, H3)
+   ========================================= */
+
+/* H1: Título principal de la página */
+.md-typeset h1 {
+    font-weight: 800;
+    color: var(--md-primary-fg-color);
+    border-bottom: 3px solid var(--md-primary-fg-color);
+    padding-bottom: 0.3rem;
+    margin-bottom: 1.5rem;
+}
+
+/* H2: Subtítulos principales (Módulos, secciones grandes) */
+.md-typeset h2 {
+    font-weight: 700;
+    color: var(--md-typeset-color); /* Color de texto estándar adaptativo */
+    border-bottom: 1px dashed var(--md-default-fg-color--light);
+    padding-bottom: 0.3rem;
+    margin-top: 2.5rem; /* Da aire respecto al contenido anterior */
+}
+
+/* H3: Subapartados (Objetivos, puntos clave) */
+.md-typeset h3 {
+    font-weight: 600;
+    color: var(--md-typeset-color);
+    border-left: 4px solid var(--md-primary-fg-color); /* Banda vertical a la izquierda */
+    padding-left: 0.6rem; /* Separación de la banda */
+    margin-top: 2rem;
+    background-color: var(--md-default-fg-color--lightest); /* Fondo muy sutil */
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border-radius: 0 4px 4px 0; /* Bordes redondeados sutiles a la derecha */
+}
+
+
+
 /***************************************/
 /* Estilos extras ofrecidos por Gemini */
 /***************************************/
