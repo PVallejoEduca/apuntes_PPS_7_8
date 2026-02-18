@@ -1,4 +1,4 @@
-# 📦 Data Classes & Lambdas: Menos código, más potencia
+# Data Classes & Lambdas: Menos código, más potencia
 
 Si vienes de Java, prepárate para llorar de alegría. ¿Recuerdas los POJOs (*Plain Old Java Objects*)? ¿Esas clases donde definías 3 variables y luego tenías que generar 100 líneas de código con *Getters*, *Setters*, `equals()`, `hashCode()` y `toString()`?
 
@@ -179,7 +179,7 @@ fun main() {
 
 ---
 
-!!! summary "🧠 Resumen para tu cerebro"
+!!! note "Resumen para tu cerebro 🧠"
     * **Data Class:** Usa `data class` para tus modelos de datos. Usa siempre `val`.
     * **Structural Sharing:** El método `.copy()` es ultra-eficiente porque recicla la memoria de los datos que no cambian.
     * **Lambdas:** Son funciones que viajan como datos.

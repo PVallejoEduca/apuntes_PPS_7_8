@@ -1,4 +1,4 @@
-# 📱 Versiones de Android (API Levels): ¿Para quién programamos?
+# Versiones de Android (API Levels): ¿Para quién programamos?
 
 Antes de escribir una sola línea de código, tenemos que entender dónde va a vivir nuestra app. El mundo Android está fragmentado: hay usuarios con móviles que salieron hace 6 años y usuarios con el último modelo plegable de este mes.
 

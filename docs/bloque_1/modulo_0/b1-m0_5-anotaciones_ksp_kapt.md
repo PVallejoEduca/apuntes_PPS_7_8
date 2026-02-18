@@ -1,4 +1,4 @@
-# 🪄 Procesamiento de Anotaciones: Adiós KAPT, Hola KSP
+# Procesamiento de Anotaciones: Adiós KAPT, Hola KSP
 
 Llegamos al último ajuste de nuestro motor antes de ponernos a programar. Este es un tema avanzado, pero te lo explico ahora porque es la causa número uno de que un proyecto tarde 5 minutos en compilar en lugar de 10 segundos.
 

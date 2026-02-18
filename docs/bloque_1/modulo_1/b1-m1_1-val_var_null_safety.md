@@ -108,13 +108,13 @@ println("Has escrito $longitudSegura caracteres.") // Imprime: Has escrito 0 car
 
 Para que aprecies lo que acabas de aprender, mira cómo se haría exactamente lo mismo en ambos lenguajes:
 
-=== "Kotlin"
+=== "🚀 Kotlin"
     ```kotlin
     val inputDelUsuario: String? = null
     val longitudSegura = inputDelUsuario?.length ?: 0
     ```
 
-=== "Java"
+=== "☕ Java"
     ```java
     String inputDelUsuario = null;
     int longitudSegura;

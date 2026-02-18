@@ -1,4 +1,4 @@
-# ⚙️ El Motor: Gradle y el Android Gradle Plugin (AGP)
+# El Motor: Gradle y el Android Gradle Plugin (AGP)
 
 Has escrito tu código en Kotlin y has puesto tus imágenes en la carpeta `res`. Pero, ¿Cómo se convierte todo eso mágicamente en una aplicación (`.apk` o `.aab`) que puedes instalar en tu móvil?
 
