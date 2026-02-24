@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MJS_TUTO-b1-m1-p</string>
+    <string name="top_bar_title">Alumnos DAM 2026</string>
+    <string name="loading_text">Conectando con el servidor...</string>
+    <string name="approved_students_title">Aprobados:</string>
+    <string name="unknown_student">Desconocido</string>
+</resources>

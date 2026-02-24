@@ -7,6 +7,12 @@ La web está creada con Python mkdocs-material. Las carpetas bases de el proyect
  - docs: página web del tutorial
  - mkdocs.yml: documento de configuración base de mkdocs
 
+
+ para instalar:
+    - Python installer
+    - Entorno local: python -m venv venv
+    - pip install mkdocs mkdocs-material
+
 Para arrancar el servidor web en local lanzar:
     - .\venv\Scripts\activate
     - mkdocs serve --livereload
