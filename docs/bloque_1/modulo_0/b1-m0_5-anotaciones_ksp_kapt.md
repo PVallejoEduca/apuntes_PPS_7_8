@@ -72,5 +72,5 @@ La diferencia en código es literalmente cambiar una palabra, pero el impacto en
 
 <div style="display: flex; justify-content: space-between; margin-top: 2rem;" markdown="span">
   [⬅️ Volver a El Motor](b1-m0_4-motor_gradle_agp.md){: .md-button }
-  [🚀 Ir al Módulo 1: Kotlin para supervivientes ➡️](../modulo_1/b1-m1-inicio.md){: .md-button .md-button--primary }
+  [🚀 Módulo 1: Kotlin para supervivientes ➡️](../modulo_1/b1-m1-inicio.md){: .md-button .md-button--primary }
 </div>

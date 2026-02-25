@@ -15,7 +15,7 @@ Antes de programar, vamos a dejar el taller listo:
 
 <div class="codelab-task">
     <input type="checkbox" id="task-0-1">
-    <label for="task-0-1">Ve a nuestro repositorio de GitHub y descarga (o clona) la rama <code>starter-code</code> del Proyecto 1.</label>
+    <label for="task-0-1">Ve a nuestro <a href="https://github.com/Mikel-Jorge/Android-Jetpack_Compose_Tutorial/tree/main/code/bloque_1/modulo_1/b1-m1-p_starter-code" target="_blank">repositorio de GitHub</a> y descarga (o clona) el código de <code>starter-code</code> del Proyecto 1.</label>
 </div>
 <div class="codelab-task">
     <input type="checkbox" id="task-0-2">
@@ -146,12 +146,16 @@ El peor fallo de la app. Busca la función `simularCargaDeDatos()`. Verás que u
 
 ---
 
+<div style="display: flex; justify-content: space-around; margin-top: 1rem;" markdown="span">
+  [💻 Ver código resuelto en GitHub](https://github.com/Mikel-Jorge/Android-Jetpack_Compose_Tutorial/tree/main/code/bloque_1/modulo_1/b1-m1-p_solution-code){: .md-button }
+</div>
+
 !!! success "🎉 ¡Reto superado!"
     Si has completado todos los pasos, vuelve a darle al "Play" en el emulador. Verás que la lista carga suavemente (el spinner se mueve sin tirones), los nulos no rompen la app y los datos se formatean correctamente.
     
     **Acabas de salvar el proyecto aplicando los cimientos del desarrollo moderno en Android.**
 
 <div style="display: flex; justify-content: space-between; margin-top: 2rem;" markdown="span">
-  [👉 Ver código resuelto en GitHub](https://github.com/Mikel-Jorge/Android-Jetpack_Compose_Tutorial/tree/main/code/bloque_1/modulo_1/b1-m1-p_solution-code){: .md-button }
-  [Módulo Siguiente: El Despertar Declarativo ➡️](../modulo_2/b1-m2-inicio.md){: .md-button .md-button--primary }
+  [⬅️ Volver a Corrutinas Básicas](b1-m0_4-motor_gradle_agp.md){: .md-button }
+  [🚀 Módulo 2: Compose Essentials ➡️](../modulo_2/b1-m2-inicio.md){: .md-button .md-button--primary }
 </div>
