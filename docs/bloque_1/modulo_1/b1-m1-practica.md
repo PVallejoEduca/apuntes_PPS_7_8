@@ -92,8 +92,8 @@ En el mismo archivo, verás que hay una función espantosa llamada `formatearNot
         return "$this pts"
     }
     
-    // Así se usaría en el código del Gestor:
-    // val textoVisual = alumno.notaMedia.aFormatoNota()
+    // Así se usaría en el código del MainActivity:
+    text = alumno.notaMedia.aFormatoNota(),
     ```
 
 ---
@@ -152,6 +152,6 @@ El peor fallo de la app. Busca la función `simularCargaDeDatos()`. Verás que u
     **Acabas de salvar el proyecto aplicando los cimientos del desarrollo moderno en Android.**
 
 <div style="display: flex; justify-content: space-between; margin-top: 2rem;" markdown="span">
-  [👉 Ver código resuelto en GitHub](URL_DE_TU_RAMA_SOLUTION){: .md-button }
-  [Bloque Siguiente: UI Profesional ➡️](../../bloque2/inicio.md){: .md-button .md-button--primary }
+  [👉 Ver código resuelto en GitHub](https://github.com/Mikel-Jorge/Android-Jetpack_Compose_Tutorial/tree/main/code/bloque_1/modulo_1/b1-m1-p_solution-code){: .md-button }
+  [Módulo Siguiente: El Despertar Declarativo ➡️](../modulo_2/b1-m2-inicio.md){: .md-button .md-button--primary }
 </div>

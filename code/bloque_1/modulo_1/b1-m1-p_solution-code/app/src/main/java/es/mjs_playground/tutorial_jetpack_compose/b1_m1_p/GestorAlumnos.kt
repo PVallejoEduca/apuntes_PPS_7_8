@@ -2,19 +2,19 @@ package es.mjs_playground.tutorial_jetpack_compose.b1_m1_p
 
 import kotlinx.coroutines.delay
 
-// 1. Data Class: Limpia, inmutable y en una línea
+// PASO 1. Data Class: Limpia, inmutable y en una línea
 data class AlumnoEntity(
     val dni: String,
     val nombre: String,
     val notaMedia: Double
 )
 
-// 2. Extension Function: Superpoderes para los Doubles
+// PASO 3. Extension Function: Superpoderes para los Doubles
 fun Double.aFormatoNota(): String {
     return "$this pts"
 }
 
-// 3. El Gestor (Simula el repositorio de datos)
+// El Gestor (Simula el repositorio de datos)
 class GestorAlumnos {
 
     // Base de datos en memoria (Simulación)
@@ -26,20 +26,20 @@ class GestorAlumnos {
         AlumnoEntity("55555555E", "Marta Ruiz", 6.0)
     )
 
-    // Función de Suspensión (Corrutinas): Espera sin bloquear la UI
+    // PASO 5. Función de Suspensión (Corrutinas): Espera sin bloquear la UI
     suspend fun simularCargaDeDatos(): List<AlumnoEntity> {
         delay(2000) // Simulamos 2 segundos de latencia de red
         return baseDeDatos
     }
 
-    // Programación Funcional: map y filter
+    // PASO 4. Programación Funcional: map y filter
     fun obtenerNombresAprobados(): List<String> {
         return baseDeDatos
             .filter { it.notaMedia >= 5.0 }
             .map { it.nombre }
     }
 
-    // Null Safety: Safe Call (?.) y Elvis (?:)
+    // PASO 2. Null Safety: Safe Call (?.) y Elvis (?:)
     fun obtenerNombrePorDni(dni: String): String {
         return baseDeDatos.find { it.dni == dni }?.nombre ?: "Desconocido"
     }
