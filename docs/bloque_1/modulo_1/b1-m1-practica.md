@@ -156,6 +156,6 @@ El peor fallo de la app. Busca la función `simularCargaDeDatos()`. Verás que u
     **Acabas de salvar el proyecto aplicando los cimientos del desarrollo moderno en Android.**
 
 <div style="display: flex; justify-content: space-between; margin-top: 2rem;" markdown="span">
-  [⬅️ Volver a Corrutinas Básicas](b1-m0_4-motor_gradle_agp.md){: .md-button }
+  [⬅️ Volver a Corrutinas Básicas](b1-m1_5-corrutinas_basicas.md){: .md-button }
   [🚀 Módulo 2: Compose Essentials ➡️](../modulo_2/b1-m2-inicio.md){: .md-button .md-button--primary }
 </div>

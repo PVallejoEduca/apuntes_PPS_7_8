@@ -17,15 +17,17 @@
     align-items: flex-start;
     margin: 10px 0;
     padding: 12px 16px;
-    background-color: var(--md-sys-color-surface-container, #f5f5f5);
+    /* Usa el fondo nativo de bloques de código de MkDocs (perfecto para light/dark) */
+    background-color: var(--md-code-bg-color);
     border-radius: 8px;
-    border-left: 4px solid var(--md-primary-fg-color, #1976d2);
+    border-left: 4px solid var(--md-primary-fg-color);
     transition: all 0.3s ease;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .codelab-task.completed {
-    background-color: var(--md-sys-color-surface-container-highest, #e8f5e9);
+    /* Un verde transparente que se ve genial tanto en fondo blanco como en negro */
+    background-color: rgba(76, 175, 80, 0.1);
     border-left-color: #4caf50;
     opacity: 0.85;
 }
@@ -36,7 +38,7 @@
     width: 20px;
     height: 20px;
     cursor: pointer;
-    accent-color: var(--md-primary-fg-color, #1976d2);
+    accent-color: var(--md-primary-fg-color);
 }
 
 .codelab-task.completed input[type="checkbox"] {
@@ -45,14 +47,18 @@
 
 .codelab-task label {
     cursor: pointer;
+    font-size: 0.75rem;
     line-height: 1.5;
     flex: 1;
     margin: 0;
+    /* Fuerza el color principal del tema activo (blanco en oscuro, negro en claro) */
+    color: var(--md-default-fg-color);
 }
 
 .codelab-task.completed label {
     text-decoration: line-through;
-    color: var(--md-default-fg-color--light, #757575);
+    /* Fuerza el color secundario/atenuado del tema activo */
+    color: var(--md-default-fg-color--light);
 }
 
 
