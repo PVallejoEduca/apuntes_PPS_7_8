@@ -124,5 +124,5 @@ Ahora que sabemos potenciar clases existentes, vamos a ver cómo Kotlin revoluci
 
 <div style="display: flex; justify-content: space-between; margin-top: 2rem;" markdown="span">
   [⬅️ Volver a Data Classes](b1-m1_2-data_class_lambdas.md){: .md-button }
-  [1.4. Colecciones Modernas ➡️](b1-m1_4-colecciones_modernas.md){: .md-button .md-button--primary }
+  [Colecciones Modernas ➡️](b1-m1_4-colecciones_modernas.md){: .md-button .md-button--primary }
 </div>

@@ -130,5 +130,5 @@ Ya sabes manipular datos como un profesional. Ahora nos falta una pieza clave: e
 
 <div style="display: flex; justify-content: space-between; margin-top: 2rem;" markdown="span">
   [⬅️ Volver a Extension Functions](b1-m1_3-extension_functions.md){: .md-button }
-  [1.5. Corrutinas Básicas ➡️](b1-m1_5-corrutinas_basicas.md){: .md-button .md-button--primary }
+  [Corrutinas Básicas ➡️](b1-m1_5-corrutinas_basicas.md){: .md-button .md-button--primary }
 </div>

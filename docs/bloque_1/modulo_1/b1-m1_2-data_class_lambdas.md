@@ -189,5 +189,5 @@ Ahora que sabemos guardar datos de forma eficiente y pasar funciones, vamos a ve
 
 <div style="display: flex; justify-content: space-between; margin-top: 2rem;" markdown="span">
   [⬅️ Volver a Val vs Var](b1-m1_1-val_var_null_safety.md){: .md-button }
-  [1.3. Extension Functions ➡️](b1-m1_3-extension_functions.md){: .md-button .md-button--primary }
+  [Extension Functions ➡️](b1-m1_3-extension_functions.md){: .md-button .md-button--primary }
 </div>
