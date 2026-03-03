@@ -1,1 +1,4 @@
-# Inicio Módulo 6: Navegación (Type-Safe)
+---
+hide:
+  - toc
+---

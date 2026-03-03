@@ -1,1 +1,4 @@
-# Inicio Módulo 20: Conectividad Bluetooth (BLE)
+---
+hide:
+  - toc
+---

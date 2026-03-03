@@ -1,1 +1,4 @@
-# Inicio Módulo 19: Sensores y Hardware Diverso
+---
+hide:
+  - toc
+---

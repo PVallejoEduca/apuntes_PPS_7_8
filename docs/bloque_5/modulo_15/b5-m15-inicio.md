@@ -1,1 +1,4 @@
-# Inicio Módulo 15: Gestión Centralizada de Permisos
+---
+hide:
+  - toc
+---

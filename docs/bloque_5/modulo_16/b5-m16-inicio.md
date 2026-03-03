@@ -1,1 +1,4 @@
-# Inicio Módulo 16: Cámara y Galería
+---
+hide:
+  - toc
+---
