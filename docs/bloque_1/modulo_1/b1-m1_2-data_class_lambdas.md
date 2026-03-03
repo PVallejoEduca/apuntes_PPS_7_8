@@ -6,7 +6,7 @@ En Kotlin, eso se acabó. Y no solo eso: vamos a aprender a pasar funciones de u
 
 ---
 
-## 1. Data Classes: La dieta milagro de tu código
+## Data Classes: La dieta milagro de tu código
 
 Una `data class` es una clase cuya única misión en la vida es guardar datos. Al poner la palabra mágica `data` delante, Kotlin escribe automáticamente por ti todo el código aburrido (*Getters*, `toString`, comparaciones...).
 
@@ -87,7 +87,7 @@ fun main() {
     [**Aquí**](https://platzi.com/blog/estructuras-de-datos-inmutables/) os dejo un enlace donde se detalla más esta explicación.
 ---
 
-## 2. Lambdas: Funciones como variables
+## Lambdas: Funciones como variables
 
 Aquí es donde a muchos les explota la cabeza, pero es el concepto más importante para dibujar pantallas en Android.
 
@@ -105,7 +105,7 @@ val resultado = suma(5, 3) // Resultado: 8
 
 ---
 
-## 3. Trailing Lambda (La sintaxis de Compose)
+## Trailing Lambda (La sintaxis de Compose)
 
 Presta atención, porque el 99% de tu código en Jetpack Compose va a usar esta regla sintáctica.
 
@@ -130,7 +130,7 @@ Boton("Enviar") {
 
 ---
 
-## 4. Lambdas Multilínea: Cuando la cosa se complica
+## Lambdas Multilínea: Cuando la cosa se complica
 
 ¿Qué pasa si tu función es compleja y no cabe en una línea? ¿Cómo hacemos un `return` dentro de una lambda?
 

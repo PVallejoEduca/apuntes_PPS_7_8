@@ -16,7 +16,7 @@ Recuerda que al ser archivos Markdown, puedes pegar código HTML puro con ```<st
 Para enlazar a otras páginas de nuestros apuntes, usamos rutas relativas. Es mucho mejor que usar URLs absolutas, ya que funcionará tanto en local como al subirlo a GitHub Pages.
 
 * [Volver a la página de Inicio](index.md)
-* [Ir a un apartado específico del Inicio](index.md#navegacion)
+<!-- * [Ir a un apartado específico del Inicio](index.md#navegacion) -->
 
 ---
 

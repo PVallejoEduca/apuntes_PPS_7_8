@@ -6,7 +6,7 @@ En esta lección vamos a instalar el entorno, descargar las herramientas necesar
 
 ---
 
-## Paso 1: Descarga e Instalación
+## Descarga e Instalación
 
 Lo primero es descargar la versión oficial y Estable de Android Studio. Huye de las versiones *Beta* o *Canary* por ahora; en clase queremos estabilidad, no experimentar con bugs.
 
@@ -21,7 +21,7 @@ Durante la instalación, el asistente te hará varias preguntas. La regla de oro
 
 ---
 
-## Paso 2: El SDK (Software Development Kit)
+## El SDK (Software Development Kit)
 
 Android Studio es solo la carcasa. Para construir apps, necesita el SDK, que es básicamente la caja de herramientas con las piezas de Android (compiladores, librerías, etc.).
 
@@ -34,7 +34,7 @@ Al abrir Android Studio por primera vez, te pedirá descargar el SDK más recien
 
 ---
 
-## Paso 3: El Emulador y el "Trauma" de la Virtualización
+## El Emulador y el "Trauma" de la Virtualización
 
 Aquí es donde el 50% de los programadores novatos se atascan el primer día. 
 
@@ -73,7 +73,7 @@ Ya tienes el entorno configurado, el motor engrasado y el móvil virtual encendi
 
 ---
 
-## Paso 4 (Alternativa): El Mundo Real (Tu dispositivo físico)
+## (Alternativa): El Mundo Real (Tu dispositivo físico)
 
 Si el emulador te da problemas de rendimiento o simplemente quieres sentir el poder de tu código en tus propias manos, conectar tu móvil físico es la mejor opción. 
 
