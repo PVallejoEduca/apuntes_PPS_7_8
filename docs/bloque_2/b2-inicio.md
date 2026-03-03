@@ -1,1 +1,5 @@
+---
+hide:
+  - toc
+---
 # Presentación Bloque 2: UI Profesional y Navegación

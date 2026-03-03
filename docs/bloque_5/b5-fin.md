@@ -1,1 +1,5 @@
+---
+hide:
+  - toc
+---
 # Fin Bloque 5: Hardware y Sensores
