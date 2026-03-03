@@ -69,11 +69,6 @@ extra_javascript:
 # control de la navegación
 nav:
   - Inicio: index.md
-  - Guía de Referencia: guia.md
-
-nav:
-  - Inicio: index.md
-  - Guía de Referencia: guia.md
   
     ########################
     ########################
