@@ -17,6 +17,7 @@ Este es el texto que TalkBack leerá en voz alta cuando el usuario pase el dedo 
 
 
 <figure markdown="span">
+  ![Ejemplo de TalkBack en uso](../../assets/bloque_1/modulo_2/5_talkback.png)
   <figcaption>Figura 1: Cuando TalkBack está activado, un recuadro verde envuelve el elemento seleccionado y el sistema lee su <code>contentDescription</code>.</figcaption>
 </figure>
 

@@ -8,6 +8,10 @@
     display: none !important;
 }
 
+.md-typeset .md-button {
+    padding: 0.625em 1.25em;
+}
+
 
 /* =========================================
    MOTOR INTERACTIVO DE CODELABS (PRÁCTICAS)

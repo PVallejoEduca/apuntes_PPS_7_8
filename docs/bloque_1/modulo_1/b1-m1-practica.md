@@ -150,6 +150,8 @@ El peor fallo de la app. Busca la función `simularCargaDeDatos()`. Verás que u
   [💻 Ver código resuelto en GitHub](https://github.com/Mikel-Jorge/Android-Jetpack_Compose_Tutorial/tree/main/code/bloque_1/modulo_1/b1-m1-p_solution-code){: .md-button }
 </div>
 
+---
+
 !!! success "🎉 ¡Reto superado!"
     Si has completado todos los pasos, vuelve a darle al "Play" en el emulador. Verás que la lista carga suavemente (el spinner se mueve sin tirones), los nulos no rompen la app y los datos se formatean correctamente.
     
@@ -157,5 +159,5 @@ El peor fallo de la app. Busca la función `simularCargaDeDatos()`. Verás que u
 
 <div style="display: flex; justify-content: space-between; margin-top: 2rem;" markdown="span">
   [⬅️ Volver a Corrutinas Básicas](b1-m1_5-corrutinas_basicas.md){: .md-button }
-  [🚀 Módulo 2: Compose Essentials ➡️](../modulo_2/b1-m2-inicio.md){: .md-button .md-button--primary }
+  [🚀 Siguiente Módulo: Compose Essentials ➡️](../modulo_2/b1-m2-inicio.md){: .md-button .md-button--primary }
 </div>
