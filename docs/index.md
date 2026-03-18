@@ -34,33 +34,6 @@ Este no es un curso de leer y memorizar; es un curso de picar código. Para aseg
 
 El curso está dividido en 6 grandes bloques. Haz clic en cada uno de ellos para acceder a sus módulos, teoría y prácticas:
 
-
-
-alskdfjlalskdfjasdklfasdl jfasdlkf asdlkf jasdflfsadlkjadfs lksd flkjasd lfkjasdlfk jasdlkfja sdlfkjdf sl
-alskdfjlalskdfjasdklfasdl jfasdlkf asdlkf jasdflfsadlkjadfs lksd flkjasd lfkjasdlfk jasdlkfja sdlfkjdf sl
-alskdfjlalskdfjasdklfasdl jfasdlkf asdlkf jasdflfsadlkjadfs lksd flkjasd lfkjasdlfk jasdlkfja sdlfkjdf sl
-alskdfjlalskdfjasdklfasdl jfasdlkf asdlkf jasdflfsadlkjadfs lksd flkjasd lfkjasdlfk jasdlkfja sdlfkjdf sl
-alskdfjlalskdfjasdklfasdl jfasdlkf asdlkf jasdflfsadlkjadfs lksd flkjasd lfkjasdlfk jasdlkfja sdlfkjdf sl
-alskdfjlalskdfjasdklfasdl jfasdlkf asdlkf jasdflfsadlkjadfs lksd flkjasd lfkjasdlfk jasdlkfja sdlfkjdf sl
-alskdfjlalskdfjasdklfasdl jfasdlkf asdlkf jasdflfsadlkjadfs lksd flkjasd lfkjasdlfk jasdlkfja sdlfkjdf sl
-alskdfjlalskdfjasdklfasdl jfasdlkf asdlkf jasdflfsadlkjadfs lksd flkjasd lfkjasdlfk jasdlkfja sdlfkjdf sl
-alskdfjlalskdfjasdklfasdl jfasdlkf asdlkf jasdflfsadlkjadfs lksd flkjasd lfkjasdlfk jasdlkfja sdlfkjdf sl
-alskdfjlalskdfjasdklfasdl jfasdlkf asdlkf jasdflfsadlkjadfs lksd flkjasd lfkjasdlfk jasdlkfja sdlfkjdf sl
-alskdfjlalskdfjasdklfasdl jfasdlkf asdlkf jasdflfsadlkjadfs lksd flkjasd lfkjasdlfk jasdlkfja sdlfkjdf sl
-alskdfjlalskdfjasdklfasdl jfasdlkf asdlkf jasdflfsadlkjadfs lksd flkjasd lfkjasdlfk jasdlkfja sdlfkjdf sl
-alskdfjlalskdfjasdklfasdl jfasdlkf asdlkf jasdflfsadlkjadfs lksd flkjasd lfkjasdlfk jasdlkfja sdlfkjdf sl
-alskdfjlalskdfjasdklfasdl jfasdlkf asdlkf jasdflfsadlkjadfs lksd flkjasd lfkjasdlfk jasdlkfja sdlfkjdf sl
-alskdfjlalskdfjasdklfasdl jfasdlkf asdlkf jasdflfsadlkjadfs lksd flkjasd lfkjasdlfk jasdlkfja sdlfkjdf sl
-alskdfjlalskdfjasdklfasdl jfasdlkf asdlkf jasdflfsadlkjadfs lksd flkjasd lfkjasdlfk jasdlkfja sdlfkjdf sl
-alskdfjlalskdfjasdklfasdl jfasdlkf asdlkf jasdflfsadlkjadfs lksd flkjasd lfkjasdlfk jasdlkfja sdlfkjdf sl
-alskdfjlalskdfjasdklfasdl jfasdlkf asdlkf jasdflfsadlkjadfs lksd flkjasd lfkjasdlfk jasdlkfja sdlfkjdf sl
-alskdfjlalskdfjasdklfasdl jfasdlkf asdlkf jasdflfsadlkjadfs lksd flkjasd lfkjasdlfk jasdlkfja sdlfkjdf sl
-alskdfjlalskdfjasdklfasdl jfasdlkf asdlkf jasdflfsadlkjadfs lksd flkjasd lfkjasdlfk jasdlkfja sdlfkjdf sl
-alskdfjlalskdfjasdklfasdl jfasdlkf asdlkf jasdflfsadlkjadfs lksd flkjasd lfkjasdlfk jasdlkfja sdlfkjdf sl
-alskdfjlalskdfjasdklfasdl jfasdlkf asdlkf jasdflfsadlkjadfs lksd flkjasd lfkjasdlfk jasdlkfja sdlfkjdf sl
-alskdfjlalskdfjasdklfasdl jfasdlkf asdlkf jasdflfsadlkjadfs lksd flkjasd lfkjasdlfk jasdlkfja sdlfkjdf sl
-
-
 <div class="course-grid">
   <a href="bloque_1/b1-inicio" class="course-card">
     <h3>🧱 BLOQUE 1: Los Cimientos</h3>
