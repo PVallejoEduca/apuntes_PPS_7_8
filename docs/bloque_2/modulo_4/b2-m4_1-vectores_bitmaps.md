@@ -1,1 +1,0 @@
-# Vectores vs Bitmaps

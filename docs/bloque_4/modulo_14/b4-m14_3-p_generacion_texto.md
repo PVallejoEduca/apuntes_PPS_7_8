@@ -1,1 +1,0 @@
-# Práctica Generación de Texto con IA

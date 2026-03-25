@@ -1,1 +1,0 @@
-# Recorte y edición Básica

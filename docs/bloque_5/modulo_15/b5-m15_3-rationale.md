@@ -1,1 +1,0 @@
-# Rationale (La explicación)

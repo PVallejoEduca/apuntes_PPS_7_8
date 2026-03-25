@@ -1,1 +1,0 @@
-# Escaneo de Dispositivos

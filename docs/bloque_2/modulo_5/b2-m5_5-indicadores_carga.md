@@ -1,1 +1,0 @@
-# Indicadores de carga modernos

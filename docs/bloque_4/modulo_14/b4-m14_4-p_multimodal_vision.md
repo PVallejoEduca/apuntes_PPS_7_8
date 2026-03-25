@@ -1,1 +1,0 @@
-# Práctica Multimodal (Visión) con IA

@@ -1,38 +1,26 @@
-site_name: Tutorial de Desarrollo Android con Jetpack Compose
-site_description: Apuntes prácticos de desarrollo Android con Jetpack Compose
-site_author: Mikel Aingeru Jorge Soteras
-copyright: "Materiales creados por Mikel Aingeru Jorge Soteras  ©  2026"
-site_url: https://mikel-jorge.github.io/Android-Jetpack_Compose_Tutorial/
+site_name: UT7 y UT8 - App Segura
+site_description: Apuntes de seguridad en aplicaciones moviles para el bloque movil de PPS
 
-# Configuración del tema Material Design
 theme:
   name: material
-  # Lenguaje de la interfaz (búsqueda, botones, etc.)
   language: es
-  
-  # Características de usabilidad y navegación
   features:
-    - navigation.tabs # Activa el menú superior principal
-    - navigation.sections # Agrupa las páginas en el menú lateral de forma limpia
-    - navigation.top # Botón flotante para "volver arriba" en apuntes largos
-    - search.suggest # Sugerencias automáticas en la barra de búsqueda
-    - search.highlight # Resalta el texto buscado dentro de la página
-    - content.code.copy # Esencial: Botón nativo para copiar los bloques de código
-    - content.code.annotate # Permite añadir explicaciones con un "+" dentro del código
-    - navigation.indexes # Permite las páginas a nivel de módulo para luego hacer subpaginas de 3º nivel
-  
-  # Paleta de colores (Estilo Android con modo claro/oscuro)
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
   palette:
-    # Modo Claro
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: teal # Verde azulado profesional, muy usado en Android Docs
+      primary: teal
       accent: indigo
       toggle:
         icon: material/brightness-7
         name: Cambiar a modo oscuro
-    
-    # Modo Oscuro
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: teal
@@ -41,288 +29,177 @@ theme:
         icon: material/brightness-4
         name: Cambiar a modo claro
 
-# Extensiones de Markdown (El motor para las explicaciones técnicas)
 markdown_extensions:
-  - admonition # Activa las cajas de "Nota", "Peligro", "Aviso"
-  - pymdownx.details # Permite hacer que las cajas de aviso sean desplegables
-  - pymdownx.superfences # Soporte mejorado para bloques de código
-  - pymdownx.tabbed: # Activa las pestañas (Ideal para mostrar Compose vs XML)
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
       alternate_style: true
-  - pymdownx.highlight: # Configuración avanzada del resaltado de sintaxis
-      anchor_linenums: true # Permite enlazar a una línea de código específica
+  - pymdownx.highlight:
+      anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
-  - pymdownx.inlinehilite # Resalta código dentro de un párrafo de texto
-  - pymdownx.snippets # Permite incrustar código de archivos .kt o .xml externos
-  - pymdownx.tasklist: # Permite hacer listas de tareas mediante [x] y []
-        custom_checkbox: true
-  - md_in_html # Habilita que MKDocs procese Markdown dentro de etiquetas HTML
-  - attr_list # Permite añadir listas de atributos para inyectar CSS (clases y estilos) a cualquier elemento Markdown
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - md_in_html
+  - attr_list
 
-# Importar mi propio CSS y JS
 extra_css:
   - css/extra.css
 
 extra_javascript:
   - js/extra.js
 
-# control de la navegación
 nav:
-  - Inicio: index.md
-  
-    ########################
-    ########################
-    #####   Bloque 1   #####
-    ########################
-    ########################
-  - 'Los Cimientos':
-      # Estas páginas SOLO aparecerán en el MENÚ LATERAL cuando el 
-      # alumno haga clic en la pestaña "Bloque 1" arriba.
-      - 'Bloque 1: Los Cimientos': bloque_1/b1-inicio.md
-      
-      # Módulo 0
-      - El Ecosistema Android (Entorno y Compilación):
-          - bloque_1/modulo_0/b1-m0-inicio.md
-          - 'Instalación y Emuladores': bloque_1/modulo_0/b1-m0_1-instalacion_emuladores.md
-          - 'Tu Primer Proyecto (Estructura de Carpetas)': bloque_1/modulo_0/b1-m0_2-primer_proyecto.md
-          - 'Versiones de Android (API Levels)': bloque_1/modulo_0/b1-m0_3-versiones_android.md
-          - 'El Motor (Gradle y AGP)': bloque_1/modulo_0/b1-m0_4-motor_gradle_agp.md
-          - 'Procesamiento de Anotaciones (KSP vs KAPT)': bloque_1/modulo_0/b1-m0_5-anotaciones_ksp_kapt.md
-      
-      # Módulo 1
-      - Kotlin para supervivientes de Java:
-          - bloque_1/modulo_1/b1-m1-inicio.md
-          - 'Val vs Var & Null Safety': bloque_1/modulo_1/b1-m1_1-val_var_null_safety.md
-          - 'Data Classes & Lambdas': bloque_1/modulo_1/b1-m1_2-data_class_lambdas.md
-          - 'Extension Functions': bloque_1/modulo_1/b1-m1_3-extension_functions.md
-          - 'Colecciones Modernas': bloque_1/modulo_1/b1-m1_4-colecciones_modernas.md
-          - 'Corrutinas Básicas': bloque_1/modulo_1/b1-m1_5-corrutinas_basicas.md
-          - 'PRÁCTICA: El código Frankenstein': bloque_1/modulo_1/b1-m1-practica.md
-      
-      # Módulo 2
-      - Compose Essentials:
-          - bloque_1/modulo_2/b1-m2-inicio.md
-          - 'Hola Compose': bloque_1/modulo_2/b1-m2_1-hola_compose.md
-          - 'Layouts Primitivos': bloque_1/modulo_2/b1-m2_2-layouts_primitivos.md
-          - 'Modifiers (La Magia)': bloque_1/modulo_2/b1-m2_3-modifiers.md
-          - 'Preview & Tooling': bloque_1/modulo_2/b1-m2_4-preview_tooling.md
-          - 'Accesibilidad por defecto': bloque_1/modulo_2/b1-m2_5-accesibilidad_por_defecto.md
-          - 'PRÁCTICA: Carnet de Alumno': bloque_1/modulo_2/b1-m2-practica.md
-      
-      # Módulo 3
-      - El Estado (State Management):
-          - bloque_1/modulo_3/b1-m3-inicio.md
-          - 'La Recomposición': bloque_1/modulo_3/b1-m3_1-recomposicion.md
-          - 'Memoria de UI (remember y mutableState)': bloque_1/modulo_3/b1-m3_2-memoria_ui.md
-          - 'State Hoisting (Elevación)': bloque_1/modulo_3/b1-m3_3-state_hoisting.md
-          - 'Inputs y Eventos': bloque_1/modulo_3/b1-m3_4-inputs_eventos.md
-      
-      - 'Fin Bloque 1: Los Cimientos': bloque_1/b1-fin.md
-      
-    ########################
-    ########################
-    #####   Bloque 2   #####
-    ########################
-    ########################
-  - 'UI Profesional y Navegación':
-      - 'Presentación Bloque 2: UI Profesional y Navegación': bloque_2/b2-inicio.md
-      
-      # Módulo 4
-      - Recursos, Assets e Internacionalización:
-          - bloque_2/modulo_4/b2-m4-inicio.md
-          - 'Vectores vs Bitmaps': bloque_2/modulo_4/b2-m4_1-vectores_bitmaps.md
-          - 'Importación y Vectorización': bloque_2/modulo_4/b2-m4_1-importacion_vectorizacion.md
-          - 'Iconos de la App (Adaptive Icons)': bloque_2/modulo_4/b2-m4_1-adaptative_icons.md
-          - 'Fuentes Personalizadas': bloque_2/modulo_4/b2-m4_1-fuentes_personalizadas.md
-          - 'Apps Multidioma (i18n)': bloque_2/modulo_4/b2-m4_1-apps_multiidioma.md
-      
-      # Módulo 5
-      - Listas y Material Design 3:
-          - bloque_2/modulo_5/b2-m5-inicio.md
-          - 'Listas Eficientes': bloque_2/modulo_5/b2-m5_1-listas_eficientes.md
-          - 'Grids': bloque_2/modulo_5/b2-m5_2-grids.md
-          - 'Carga de Imágenes': bloque_2/modulo_5/b2-m5_3-carga_imagenes.md
-          - 'Material Theming y Componentes': bloque_2/modulo_5/b2-m5_4-material_theming_componentes.md
-          - 'Indicadores de carga modernos': bloque_2/modulo_5/b2-m5_5-indicadores_carga.md
-          - 'Animaciones en Compose': bloque_2/modulo_5/b2-m5_6-animaciones_compose.md
-          - 'Pantallas Flexibles': bloque_2/modulo_5/b2-m5_7-pantallas_flexibles.md
-      
-      # Módulo 6
-      - Navegación (Type-Safe):
-          - bloque_2/modulo_6/b2-m6-inicio.md
-          - 'El Grafo de Navegación': bloque_2/modulo_6/b2-m6_1-grafo_navegacion.md
-          - 'Rutas Tipadas (Serializable)': bloque_2/modulo_6/b2-m6_2-rutas_tipadas.md
-          - 'Paso de Argumentos': bloque_2/modulo_6/b2-m6_3-paso_argumentos.md
-          - 'UI de Navegación': bloque_2/modulo_6/b2-m6_4-ui_navegacion.md
-      
-      - 'Fin Bloque 2: UI Profesional y Navegación': bloque_2/b2-fin.md
-      
-    ########################
-    ########################
-    #####   Bloque 3   #####
-    ########################
-    ########################
-  - 'Arquitectura, Redes y Datos':
-      - 'Presentación Bloque 3: Arquitectura, Redes y Datos': bloque_3/b3-inicio.md
-      
-      # Módulo 7
-      - El cerebro de la UI (MVVM & StateFlow):
-          - bloque_3/modulo_7/b3-m7-inicio.md
-          - 'El ViewModel': bloque_3/modulo_7/b3-m7_1-view_model.md
-          - 'StateFlow & UI State': bloque_3/modulo_7/b3-m7_2-state_flow_ui_state.md
-          - 'Consumo en Compose': bloque_3/modulo_7/b3-m7_3-consumo_compose.md
-          - 'Flujo Unidireccional': bloque_3/modulo_7/b3-m7_4-flujo_unidireccional.md
-      
-      # Módulo 8
-      - Efectos y Asincronía:
-          - bloque_3/modulo_8/b3-m8-inicio.md
-          - 'Side Effects': bloque_3/modulo_8/b3-m8_1-side_effects.md
-          - 'LaunchedEffect': bloque_3/modulo_8/b3-m8_2-launched_effect.md
-          - 'Corrutinas en UI': bloque_3/modulo_8/b3-m8_3-corrutinas_ui.md
-          - 'DisposableEffect': bloque_3/modulo_8/b3-m8_4-disposable_effect.md
-      
-      # Módulo 9
-      - Conectividad HTTP (Consumo de APIs REST):
-          - bloque_3/modulo_9/b3-m8-inicio.md
-          - 'Cliente HTTP (Ktor/Retrofit)': bloque_3/modulo_9/b3-m8_1-cliente_http.md
-          - 'Parsing JSON': bloque_3/modulo_9/b3-m8_2-parsing_json.md
-          - 'Repositorio de Red': bloque_3/modulo_9/b3-m8_3-repositorio_red.md
-          - 'Gestión de Errores': bloque_3/modulo_9/b3-m8_4-gestion_errores.md
-      
-      # Módulo 10
-      - Persistencia Local:
-          - bloque_3/modulo_10/b3-m10-inicio.md
-          - 'DataStore': bloque_3/modulo_10/b3-m10_1-datastore.md
-          - 'Room': bloque_3/modulo_10/b3-m10_2-room.md
-          - 'Relaciones': bloque_3/modulo_10/b3-m10_3-relaciones.md
-          - 'Reactividad': bloque_3/modulo_10/b3-m10_4-Reactividad.md
-      
-      # Módulo 11
-      - Arquitectura Profesional (Clean Arquitecture + DI):
-          - bloque_3/modulo_11/b3-m11-inicio.md
-          - 'Clean Architecture': bloque_3/modulo_11/b3-m11_1-clean_architecture.md
-          - 'Pattern Repository': bloque_3/modulo_11/b3-m11_2-pattern_repository.md
-          - 'Inyección de Dependencias (Hilt)': bloque_3/modulo_11/b3-m11_3-inyeccion_dependencias.md
-          - 'Módulos DI': bloque_3/modulo_11/b3-m11_4-modulos_di.md
-      
-      - 'Fin Bloque 3: Arquitectura, Redes y Datos': bloque_3/b3-fin.md
-      
-    ########################
-    ########################
-    #####   Bloque 4   #####
-    ########################
-    ########################
-  - 'Integración Cloud y Background':
-      - 'Presentación Bloque 4: Integración Cloud y Background': bloque_4/b4-inicio.md
-      
-      # Módulo 12
-      - Backend as a Service (Firebase):
-          - bloque_4/modulo_12/b4-m12-inicio.md
-          - 'Setup y Console': bloque_4/modulo_12/b4-m12_1-setup_console.md
-          - 'Authentication': bloque_4/modulo_12/b4-m12_2-authentication.md
-          - 'Firestore': bloque_4/modulo_12/b4-m12_3-firestore.md
-          - 'Storage': bloque_4/modulo_12/b4-m12_4-storage.md
-      
-      # Módulo 13
-      - Tareas en Segundo Plano y Notificaciones:
-          - bloque_4/modulo_13/b4-m13-inicio.md
-          - 'Notificaciones Locales': bloque_4/modulo_13/b4-m13_1-notificaciones_locales.md
-          - 'Notificaciones Push (FCM)': bloque_4/modulo_13/b4-m13_2-notificaciones_push.md
-          - 'WorkManager': bloque_4/modulo_13/b4-m13_3-workmanager.md
-          - 'Receptores (BroadcastReceivers)': bloque_4/modulo_13/b4-m13_4-receptores.md
-      
-      # Módulo 14
-      - Inteligencia Artificial Aplicada (Gemini API):
-          - bloque_4/modulo_14/b4-m14-inicio.md
-          - 'El ecosistema IA en Android': bloque_4/modulo_14/b4-m14_1-ia_android.md
-          - 'Seguridad y Setup': bloque_4/modulo_14/b4-m14_2-seguridad_setup.md
-          - 'Práctica Generación de Texto con IA': bloque_4/modulo_14/b4-m14_3-p_generacion_texto.md
-          - 'Práctica Multimodal (Visión) con IA': bloque_4/modulo_14/b4-m14_4-p_multimodal_vision.md
-      
-      - 'Fin Bloque 4: Integración Cloud y Background': bloque_4/b4-fin.md
-      
-    ########################
-    ########################
-    #####   Bloque 5   #####
-    ########################
-    ########################
-  - 'Hardware y Sensores':
-      - 'Presentación Bloque 5: Hardware y Sensores': bloque_5/b5-inicio.md
-      
-      # Módulo 15
-      - Gestión Centralizada de Permisos:
-          - bloque_5/modulo_15/b5-m15-inicio.md
-          - 'El modelo de Permisos de Android': bloque_5/modulo_15/b5-m15_1-permisos_android.md
-          - 'Accompanist / API Nativa en Compose': bloque_5/modulo_15/b5-m15_2-accompanist_api_nativa.md
-          - 'Rationale (La explicación)': bloque_5/modulo_15/b5-m15_3-rationale.md
-          - 'Manejo de denegaciones': bloque_5/modulo_15/b5-m15_4-manejo_denegaciones.md
-      
-      # Módulo 16
-      - Cámara y Galería:
-          - bloque_5/modulo_16/b5-m16-inicio.md
-          - 'Photo Picker': bloque_5/modulo_16/b5-m16_1-photo_picker.md
-          - 'CameraX': bloque_5/modulo_16/b5-m16_2-camerax.md
-          - 'Recorte y edición Básica': bloque_5/modulo_16/b5-m16_3-_recorte_edicion_basica.md
-          - 'Manejo de URIs y FileProvider': bloque_5/modulo_16/b5-m16_4-manejo_uris_fileprovider.md
-      
-      # Módulo 17
-      - Reproducción Multimedia (Audio y Vídeo):
-          - bloque_5/modulo_17/b5-m17-inicio.md
-          - 'Efectos de Sonido Básicos': bloque_5/modulo_17/b5-m17_1-efectos_sonido_basicos.md
-          - 'El Estándar Moderno (Media3 / ExoPlayer)': bloque_5/modulo_17/b5-m17_2-estandar_moderno.md
-          - 'Integración de YouTube': bloque_5/modulo_17/b5-m17_3-integracion_youtube.md
-          - 'Reproducción en Segundo Plano': bloque_5/modulo_17/b5-m17_4-reproduccion_segundo_plano.md
-      
-      # Módulo 18
-      - Localización y Mapas:
-          - bloque_5/modulo_18/b5-m18-inicio.md
-          - 'Integración de Permisos de Ubicación': bloque_5/modulo_18/b5-m18_1-integracion_permisos_ubicacion.md
-          - 'FusedLocationProvider': bloque_5/modulo_18/b5-m18_2-fused_location_provider.md
-          - 'Google Maps Compose': bloque_5/modulo_18/b5-m18_3-google_maps_compose.md
-          - 'Pintando el Mapa': bloque_5/modulo_18/b5-m18_4-pintando_mapa.md
-      
-      # Módulo 19
-      - Sensores y Hardware Diverso:
-          - bloque_5/modulo_19/b5-m19-inicio.md
-          - 'Sensores Físicos': bloque_5/modulo_19/b5-m19_1-sensores_fisicos.md
-          - 'Sensores Ambientales': bloque_5/modulo_19/b5-m19_2-sensores_ambientales.md
-          - 'Biometría': bloque_5/modulo_19/b5-m19_3-biometria.md
-          - 'Linterna y Vibración': bloque_5/modulo_19/b5-m19_4-linterna_vibracion.md
-      
-      # Módulo 20
-      - Conectividad Bluetooth (BLE):
-          - bloque_5/modulo_20/b5-m20-inicio.md
-          - 'El Infierno de los Permisos': bloque_5/modulo_20/b5-m20_1-infierno_permisos.md
-          - 'Escaneo de Dispositivos': bloque_5/modulo_20/b5-m20_2-escaneo_dispositivos.md
-          - 'Conexión GATT': bloque_5/modulo_20/b5-m20_3-conexion_gatt.md
-      
-      - 'Fin Bloque 5: Hardware y Sensores': bloque_5/b5-fin.md
-      
-    ########################
-    ########################
-    #####   Bloque 6   #####
-    ########################
-    ########################
-  - 'Calidad y Despliegue':
-      - 'Presentación Bloque 6: Calidad y Despliegue': bloque_6/b6-inicio.md
-      
-      # Módulo 21
-      - Testing y Depuración (Quality Assurance):
-          - bloque_6/modulo_21/b6-m21-inicio.md
-          - 'Unit Testing (Lógica)': bloque_6/modulo_21/b6-m21_1-unit_testing.md
-          - 'UI Testing (Compose)': bloque_6/modulo_21/b6-m21_2-ui_testing.md
-          - 'Herramientas de Debugging': bloque_6/modulo_21/b6-m21_3-herramientas_debugging.md
-          - 'Monitorización de Crashes': bloque_6/modulo_21/b6-m21_4-monitorizacion_crashes.md
-      
-      # Módulo 22
-      - Publicación y Mantenimiento (DevOps):
-          - bloque_6/modulo_22/b6-m22-inicio.md
-          - 'Configuración de Gradle (KTS)': bloque_6/modulo_22/b6-m22_1-gradle_kts.md
-          - 'Seguridad y Optimización (ProGuard/R8)': bloque_6/modulo_22/b6-m22_2-seguridad_optimizacion.md
-          - 'Firmado Digital': bloque_6/modulo_22/b6-m22_3-firmado_digital.md
-          - 'Google Play Console': bloque_6/modulo_22/b6-m22_4-google_play_console.md
-      
-      - 'Fin Bloque 6: Calidad y Despliegue': bloque_6/b6-fin.md
+  - "Inicio": index.md
 
+  - "Marco comun (RA4)":
+      - "Presentacion": marco_comun/index.md
+      - "0. Marco comun del bloque movil":
+          - "0.1. Que se entiende por seguridad en aplicaciones moviles": marco_comun/capitulo_00/0_1-que_se_entiende_seguridad_apps_moviles.md
+          - "0.2. Diferencias entre seguridad web y seguridad movil": marco_comun/capitulo_00/0_2-diferencias_seguridad_web_movil.md
+          - "0.3. Superficie de ataque de una app movil": marco_comun/capitulo_00/0_3-superficie_ataque_app_movil.md
 
+  - "UT7. Movil I: permisos, almacenamiento y trafico":
+      - "Presentacion": ut7/index.md
+      - "1. Introduccion a la arquitectura de una app movil":
+          - "1.1. Componentes basicos de una app movil": ut7/capitulo_01/1_1-componentes_basicos_app_movil.md
+          - "1.2. Cliente, sistema operativo, backend y servicios externos": ut7/capitulo_01/1_2-cliente_so_backend_servicios_externos.md
+          - "1.3. Donde viven los datos y por donde circulan": ut7/capitulo_01/1_3-donde_viven_datos_y_por_donde_circulan.md
+          - "1.4. Que partes son sensibles desde el punto de vista de seguridad": ut7/capitulo_01/1_4-partes_sensibles_desde_seguridad.md
+      - "2. Modelos de permisos en plataformas moviles":
+          - "2.1. Que es un permiso y que protege realmente": ut7/capitulo_02/2_1-que_es_permiso_y_que_protege.md
+          - "2.2. Permisos declarados vs permisos concedidos": ut7/capitulo_02/2_2-permisos_declarados_vs_concedidos.md
+          - "2.3. Permisos normales, peligrosos y especiales": ut7/capitulo_02/2_3-permisos_normales_peligrosos_especiales.md
+          - "2.4. Diferencias basicas entre Android e iOS": ut7/capitulo_02/2_4-diferencias_android_ios.md
+          - "2.5. Llamadas al sistema protegidas y riesgo asociado": ut7/capitulo_02/2_5-llamadas_sistema_protegidas_y_riesgo.md
+      - "3. Principio de minimo privilegio en apps moviles":
+          - "3.1. Pedir solo lo imprescindible": ut7/capitulo_03/3_1-pedir_solo_lo_imprescindible.md
+          - "3.2. Permisos por funcionalidad, no por comodidad": ut7/capitulo_03/3_2-permisos_por_funcionalidad_no_comodidad.md
+          - "3.3. Cuando solicitar un permiso": ut7/capitulo_03/3_3-cuando_solicitar_permiso.md
+          - "3.4. Como justificarlo al usuario": ut7/capitulo_03/3_4-como_justificar_permiso_usuario.md
+          - "3.5. Errores tipicos: pedir de mas, pedir demasiado pronto o pedir sin contexto": ut7/capitulo_03/3_5-errores_tipicos_en_solicitud_permisos.md
+      - "4. Riesgos de permisos mal disenados":
+          - "4.1. Exposicion de datos personales": ut7/capitulo_04/4_1-exposicion_datos_personales.md
+          - "4.2. Acceso innecesario a camara, ubicacion, contactos o almacenamiento": ut7/capitulo_04/4_2-acceso_innecesario_recursos_sensibles.md
+          - "4.3. Impacto en privacidad y confianza": ut7/capitulo_04/4_3-impacto_privacidad_y_confianza.md
+          - "4.4. Casos tipicos de mala practica en apps reales": ut7/capitulo_04/4_4-malas_practicas_apps_reales.md
+          - "4.5. Como convertir un permiso en hallazgo de auditoria": ut7/capitulo_04/4_5-permiso_como_hallazgo_auditoria.md
+      - "5. Almacenamiento local en aplicaciones moviles":
+          - "5.1. Donde puede guardar datos una app": ut7/capitulo_05/5_1-donde_puede_guardar_datos_una_app.md
+          - "5.2. SharedPreferences, ficheros, bases de datos, cache y almacenamiento temporal": ut7/capitulo_05/5_2-sharedpreferences_ficheros_bbdd_cache_temporal.md
+          - "5.3. Que tipo de informacion suele terminar ahi": ut7/capitulo_05/5_3-que_informacion_suele_terminar_ahi.md
+          - "5.4. Riesgos de guardar datos sensibles en claro": ut7/capitulo_05/5_4-riesgos_datos_sensibles_en_claro.md
+          - "5.5. Persistencia y exposicion local": ut7/capitulo_05/5_5-persistencia_y_exposicion_local.md
+      - "6. Almacenamiento seguro de datos":
+          - "6.1. Que datos son sensibles en movil": ut7/capitulo_06/6_1-datos_sensibles_en_movil.md
+          - "6.2. Tokens, credenciales, claves, identificadores y datos personales": ut7/capitulo_06/6_2-tokens_credenciales_claves_identificadores_datos_personales.md
+          - "6.3. Keystore y Keychain, idea general": ut7/capitulo_06/6_3-keystore_y_keychain_idea_general.md
+          - "6.4. Cifrado local y almacenamiento cifrado": ut7/capitulo_06/6_4-cifrado_local_y_almacenamiento_cifrado.md
+          - "6.5. Que no debe quedar accesible en texto plano": ut7/capitulo_06/6_5-no_dejar_texto_plano.md
+      - "7. Fugas de informacion en el dispositivo":
+          - "7.1. Logs inseguros": ut7/capitulo_07/7_1-logs_inseguros.md
+          - "7.2. Clipboard": ut7/capitulo_07/7_2-clipboard.md
+          - "7.3. Backups automaticos": ut7/capitulo_07/7_3-backups_automaticos.md
+          - "7.4. Capturas de pantalla y multitarea": ut7/capitulo_07/7_4-capturas_pantalla_y_multitarea.md
+          - "7.5. Datos residuales en cache": ut7/capitulo_07/7_5-datos_residuales_en_cache.md
+          - "7.6. Informacion expuesta en mensajes de error": ut7/capitulo_07/7_6-informacion_expuesta_mensajes_error.md
+      - "8. Comunicacion de red en aplicaciones moviles":
+          - "8.1. Como se comunica una app con su backend": ut7/capitulo_08/8_1-comunicacion_app_backend.md
+          - "8.2. Peticiones HTTP y HTTPS": ut7/capitulo_08/8_2-peticiones_http_https.md
+          - "8.3. Que protege TLS y que no protege": ut7/capitulo_08/8_3-que_protege_tls_y_que_no.md
+          - "8.4. Datos en transito y riesgo de exposicion": ut7/capitulo_08/8_4-datos_en_transito_y_riesgo_exposicion.md
+          - "8.5. Endpoints, cabeceras, tokens y sesiones": ut7/capitulo_08/8_5-endpoints_cabeceras_tokens_sesiones.md
+      - "9. Protocolos seguros e inseguros":
+          - "9.1. Por que HTTP no es aceptable": ut7/capitulo_09/9_1-por_que_http_no_es_aceptable.md
+          - "9.2. Que significa realmente usar HTTPS": ut7/capitulo_09/9_2-que_significa_usar_https.md
+          - "9.3. Errores comunes de configuracion": ut7/capitulo_09/9_3-errores_comunes_configuracion.md
+          - "9.4. Certificados, confianza y validacion basica": ut7/capitulo_09/9_4-certificados_confianza_validacion_basica.md
+          - "9.5. Casos de trafico inseguro que si deben saber reconocer": ut7/capitulo_09/9_5-casos_trafico_inseguro_reconocer.md
+      - "10. Monitorizacion e inspeccion del trafico":
+          - "10.1. Que significa interceptar trafico en un laboratorio": ut7/capitulo_10/10_1-interceptar_trafico_en_laboratorio.md
+          - "10.2. Que herramientas se usan y para que": ut7/capitulo_10/10_2-herramientas_intercepcion_y_uso.md
+          - "10.3. Que se puede observar en una peticion": ut7/capitulo_10/10_3-que_observar_en_una_peticion.md
+          - "10.4. Que indicios convierten una comunicacion en insegura": ut7/capitulo_10/10_4-indicios_comunicacion_insegura.md
+          - "10.5. Evidencias validas en una auditoria de trafico": ut7/capitulo_10/10_5-evidencias_validas_auditoria_trafico.md
+      - "11. Certificate pinning, solo introduccion":
+          - "11.1. Que problema intenta resolver": ut7/capitulo_11/11_1-problema_que_resuelve_pinning.md
+          - "11.2. Idea basica de pinning": ut7/capitulo_11/11_2-idea_basica_pinning.md
+          - "11.3. Ventajas y limitaciones": ut7/capitulo_11/11_3-ventajas_y_limitaciones.md
+          - "11.4. Por que aqui lo tratamos a nivel introductorio": ut7/capitulo_11/11_4-por_que_introductorio.md
+          - "11.5. Relacion con MITM controlado en laboratorio": ut7/capitulo_11/11_5-relacion_mitm_controlado_laboratorio.md
+      - "12. Criterios de revision de UT7":
+          - "12.1. Como revisar permisos de forma sistematica": ut7/capitulo_12/12_1-revisar_permisos_sistematicamente.md
+          - "12.2. Como revisar almacenamiento local": ut7/capitulo_12/12_2-revisar_almacenamiento_local.md
+          - "12.3. Como revisar trafico de red": ut7/capitulo_12/12_3-revisar_trafico_red.md
+          - "12.4. Checklist base de auditoria": ut7/capitulo_12/12_4-checklist_base_auditoria.md
+          - "12.5. Errores comunes y como documentarlos": ut7/capitulo_12/12_5-errores_comunes_y_documentacion.md
 
+  - "UT8. Movil II: binarios, firmas y compras in-app":
+      - "Presentacion": ut8/index.md
+      - "13. Que es un binario movil y que puede revelar":
+          - "13.1. APK, AAB, IPA, conceptos basicos": ut8/capitulo_13/13_1-apk_aab_ipa_conceptos_basicos.md
+          - "13.2. Que contiene un paquete de aplicacion": ut8/capitulo_13/13_2-contenido_paquete_aplicacion.md
+          - "13.3. Metadatos, recursos, manifiesto, librerias y cadenas": ut8/capitulo_13/13_3-metadatos_recursos_manifiesto_librerias_cadenas.md
+          - "13.4. Que puede extraerse sin ejecutar la app": ut8/capitulo_13/13_4-extraer_sin_ejecutar_app.md
+          - "13.5. Limites del analisis basico en aula": ut8/capitulo_13/13_5-limites_analisis_basico_aula.md
+      - "14. Firma e integridad de aplicaciones":
+          - "14.1. Que significa firmar una app": ut8/capitulo_14/14_1-que_significa_firmar_app.md
+          - "14.2. Para que sirve la firma": ut8/capitulo_14/14_2-para_que_sirve_firma.md
+          - "14.3. Relacion entre firma, integridad y confianza": ut8/capitulo_14/14_3-firma_integridad_confianza.md
+          - "14.4. Que implica una build no confiable": ut8/capitulo_14/14_4-build_no_confiable.md
+          - "14.5. Verificacion basica de firma en contexto docente": ut8/capitulo_14/14_5-verificacion_basica_firma_contexto_docente.md
+      - "15. Cadena de confianza en una aplicacion movil":
+          - "15.1. Cliente, binario, sistema operativo y backend": ut8/capitulo_15/15_1-cliente_binario_so_backend.md
+          - "15.2. Que partes pueden considerarse confiables y cuales no": ut8/capitulo_15/15_2-partes_confiables_y_no_confiables.md
+          - "15.3. Por que el cliente nunca debe ser la unica fuente de verdad": ut8/capitulo_15/15_3-cliente_no_fuente_unica_verdad.md
+          - "15.4. Relacion entre integridad del binario y confianza operativa": ut8/capitulo_15/15_4-integridad_binario_y_confianza_operativa.md
+      - "16. Fuga de informacion en ejecutables":
+          - "16.1. Strings y secretos embebidos": ut8/capitulo_16/16_1-strings_y_secretos_embebidos.md
+          - "16.2. URLs, tokens, claves y nombres internos": ut8/capitulo_16/16_2-urls_tokens_claves_nombres_internos.md
+          - "16.3. Configuracion sensible incluida por error": ut8/capitulo_16/16_3-configuracion_sensible_incluida_por_error.md
+          - "16.4. Informacion util para un atacante": ut8/capitulo_16/16_4-informacion_util_para_atacante.md
+          - "16.5. Como convertir esto en evidencia de auditoria": ut8/capitulo_16/16_5-evidencia_auditoria_desde_ejecutable.md
+      - "17. Ofuscacion, para que sirve y para que no sirve":
+          - "17.1. Que es ofuscar": ut8/capitulo_17/17_1-que_es_ofuscar.md
+          - "17.2. Que dificulta realmente": ut8/capitulo_17/17_2-que_dificulta_realmente.md
+          - "17.3. Por que no sustituye a un diseno seguro": ut8/capitulo_17/17_3-no_sustituye_diseno_seguro.md
+          - "17.4. Cuando tiene sentido": ut8/capitulo_17/17_4-cuando_tiene_sentido.md
+          - "17.5. Vision realista: defensa complementaria, no solucion magica": ut8/capitulo_17/17_5-vision_realista_defensa_complementaria.md
+      - "18. Compras integradas, modelo funcional y riesgos":
+          - "18.1. Que es una compra in-app": ut8/capitulo_18/18_1-que_es_compra_in_app.md
+          - "18.2. Actores implicados: app, tienda, backend y usuario": ut8/capitulo_18/18_2-actores_implicados.md
+          - "18.3. Que se valida y en que punto": ut8/capitulo_18/18_3-que_se_valida_y_cuando.md
+          - "18.4. Riesgos de confiar solo en el cliente": ut8/capitulo_18/18_4-riesgos_confiar_solo_cliente.md
+          - "18.5. Casos tipicos de error logico": ut8/capitulo_18/18_5-casos_tipicos_error_logico.md
+      - "19. Validacion server-side de compras":
+          - "19.1. Flujo correcto de validacion": ut8/capitulo_19/19_1-flujo_correcto_validacion.md
+          - "19.2. Que debe comprobar el servidor": ut8/capitulo_19/19_2-que_debe_comprobar_servidor.md
+          - "19.3. Relacion entre recibo, orden y usuario": ut8/capitulo_19/19_3-relacion_recibo_orden_usuario.md
+          - "19.4. Registro, trazabilidad y rechazo": ut8/capitulo_19/19_4-registro_trazabilidad_rechazo.md
+          - "19.5. Que significa implantar validacion en servidor de verdad": ut8/capitulo_19/19_5-validacion_servidor_de_verdad.md
+      - "20. Ataques tipicos al flujo de compra":
+          - "20.1. Replay": ut8/capitulo_20/20_1-replay.md
+          - "20.2. Recibo manipulado": ut8/capitulo_20/20_2-recibo_manipulado.md
+          - "20.3. Recibo repetido": ut8/capitulo_20/20_3-recibo_repetido.md
+          - "20.4. Bypass local": ut8/capitulo_20/20_4-bypass_local.md
+          - "20.5. Caducidad, duplicidad y asociacion incorrecta": ut8/capitulo_20/20_5-caducidad_duplicidad_asociacion_incorrecta.md
+      - "21. Pruebas negativas y criterios de rechazo":
+          - "21.1. Que es una prueba negativa": ut8/capitulo_21/21_1-que_es_prueba_negativa.md
+          - "21.2. Que rechazos deben producirse": ut8/capitulo_21/21_2-rechazos_que_deben_producirse.md
+          - "21.3. Como interpretar un fallo correcto": ut8/capitulo_21/21_3-como_interpretar_fallo_correcto.md
+          - "21.4. Logs y evidencias del backend": ut8/capitulo_21/21_4-logs_y_evidencias_backend.md
+          - "21.5. Como redactar la conclusion tecnica": ut8/capitulo_21/21_5-redactar_conclusion_tecnica.md
+      - "22. Revision integrada del binario y del backend":
+          - "22.1. Lo que el binario expone": ut8/capitulo_22/22_1-lo_que_binario_expone.md
+          - "22.2. Lo que el backend valida": ut8/capitulo_22/22_2-lo_que_backend_valida.md
+          - "22.3. Que inconsistencias deben levantar sospechas": ut8/capitulo_22/22_3-inconsistencias_que_levantan_sospechas.md
+          - "22.4. Como unir evidencia cliente + backend en un mismo informe": ut8/capitulo_22/22_4-unir_evidencia_cliente_backend_informe.md
+      - "23. Criterios de revision de UT8":
+          - "23.1. Checklist de binario y firma": ut8/capitulo_23/23_1-checklist_binario_y_firma.md
+          - "23.2. Checklist de secretos y fuga de informacion": ut8/capitulo_23/23_2-checklist_secretos_y_fuga_informacion.md
+          - "23.3. Checklist de compras integradas": ut8/capitulo_23/23_3-checklist_compras_integradas.md
+          - "23.4. Checklist de pruebas negativas": ut8/capitulo_23/23_4-checklist_pruebas_negativas.md
+          - "23.5. Priorizacion de hallazgos": ut8/capitulo_23/23_5-priorizacion_hallazgos.md

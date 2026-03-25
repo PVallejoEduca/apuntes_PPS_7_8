@@ -1,1 +1,0 @@
-# Apps Multidioma (i18n)

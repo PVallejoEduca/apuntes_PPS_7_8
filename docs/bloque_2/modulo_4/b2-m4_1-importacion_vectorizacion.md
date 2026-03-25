@@ -1,1 +1,0 @@
-# Importación y Vectorización
