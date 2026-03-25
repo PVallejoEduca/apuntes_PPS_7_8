@@ -4,6 +4,8 @@ site_description: Apuntes de seguridad en aplicaciones moviles para el bloque mo
 theme:
   name: material
   language: es
+  logo: assets/logo_app_apuntes.png
+  favicon: assets/logo_app_apuntes.png
   font:
     text: Source Sans 3
     code: IBM Plex Mono
