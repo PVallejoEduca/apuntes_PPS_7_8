@@ -333,18 +333,19 @@
 }
 
 .md-typeset li {
-    line-height: 1.5;
-    margin-bottom: 0.06em;
+    line-height: 1.44;
+    margin-bottom: 0 !important;
+    padding-bottom: 0;
 }
 
 .md-typeset li p {
-    margin: 0.12em 0 0.28em;
+    margin: 0.08em 0 0.16em;
 }
 
 .md-typeset li > ul,
 .md-typeset li > ol {
-    margin-top: 0.18em;
-    margin-bottom: 0.22em;
+    margin-top: 0.12em;
+    margin-bottom: 0.12em;
 }
 
 .md-typeset h1 {
