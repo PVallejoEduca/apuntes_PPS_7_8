@@ -26,11 +26,11 @@ La información sensible no debe quedar expuesta a quien no corresponda.
 
 Por ejemplo, no deberían poder leerse en claro:
 
-* tokens de sesión
-* direcciones de correo
-* ubicaciones
-* historiales de compras
-* contraseñas
+- tokens de sesión
+- direcciones de correo
+- ubicaciones
+- historiales de compras
+- contraseñas
 
 La exposición puede ocurrir en varios puntos: en el dispositivo, en el tráfico de red o incluso dentro del propio binario.
 
@@ -44,9 +44,9 @@ Un caso clásico es una compra integrada validada solo en cliente. La app puede 
 
 La app debe poder confiar en tres cosas:
 
-* quién es el usuario
-* con qué backend se está comunicando
-* qué binario se está ejecutando
+- quién es el usuario
+- con qué backend se está comunicando
+- qué binario se está ejecutando
 
 Si esa cadena de confianza falla, pueden aparecer suplantaciones, tráfico interceptado o builds manipuladas.
 
@@ -65,12 +65,12 @@ En móvil hay un factor que complica bastante el escenario: **el dispositivo no 
 
 La aplicación vive dentro de un sistema operativo que:
 
-* concede permisos
-* comparte recursos con otras apps
-* mantiene cachés
-* guarda registros
-* permite copias de seguridad
-* gestiona portapapeles y servicios del sistema
+- concede permisos
+- comparte recursos con otras apps
+- mantiene cachés
+- guarda registros
+- permite copias de seguridad
+- gestiona portapapeles y servicios del sistema
 
 Eso significa que una mala decisión de seguridad no afecta solo al código de la app, sino también al entorno donde ese código se ejecuta.
 
@@ -80,21 +80,21 @@ Por eso, la seguridad móvil debe entenderse como una combinación de capas.
 
 Al analizar la seguridad de una app móvil conviene revisar, al menos, estas capas:
 
-* seguridad de permisos
-* seguridad del almacenamiento local
-* seguridad de la comunicación de red
-* seguridad del binario y su integridad
-* seguridad de la lógica de negocio
-* seguridad del backend que valida lo que la app hace
+- seguridad de permisos
+- seguridad del almacenamiento local
+- seguridad de la comunicación de red
+- seguridad del binario y su integridad
+- seguridad de la lógica de negocio
+- seguridad del backend que valida lo que la app hace
 
 Dicho de forma simple, una app móvil segura no es la que **parece segura**, sino la que resiste una revisión razonable en todas estas capas.
 
 !!! tip "Conexión con el módulo"
-    Este enfoque encaja directamente con el currículo del módulo 5023, porque el **RA4** exige detectar problemas de seguridad en apps móviles mediante el análisis de permisos, almacenamiento, validación *server-side* de compras, tráfico y binarios.
+    Este enfoque encaja directamente con el currículo del módulo 5023, porque el **RA4** exige detectar problemas de seguridad en apps móviles mediante el análisis de permisos, almacenamiento, validación *server-side* de compras, tráfico y binarios.  
     Además, en la guía operativa de la asignatura este planteamiento se reparte entre **UT7** y **UT8**:
-
-    * **UT7**: permisos, almacenamiento y tráfico
-    * **UT8**: binarios, firmas y compras *in-app*
+    
+    - **UT7**: permisos, almacenamiento y tráfico
+    - **UT8**: binarios, firmas y compras *in-app*
 
 ---
 
@@ -104,20 +104,20 @@ Una app móvil puede manejar muchos activos sensibles. Algunos son evidentes y o
 
 ### Activos típicos
 
-* credenciales de acceso
-* tokens de sesión
-* datos personales
-* ubicación
-* historiales de uso
-* mensajes o contenido privado
-* recibos de compra
-* identificadores internos
-* endpoints expuestos por error
-* claves incluidas accidentalmente
-* lógica de negocio asociada a funciones premium o restringidas
+- credenciales de acceso
+- tokens de sesión
+- datos personales
+- ubicación
+- historiales de uso
+- mensajes o contenido privado
+- recibos de compra
+- identificadores internos
+- endpoints expuestos por error
+- claves incluidas accidentalmente
+- lógica de negocio asociada a funciones premium o restringidas
 
 !!! warning "Error frecuente"
-    Un error muy habitual es pensar que solo son sensibles las contraseñas.
+    Un error muy habitual es pensar que solo son sensibles las contraseñas.  
     No es así. A veces un simple token, una URL interna o un log con demasiada información ya suponen un problema serio.
 
 ---
@@ -128,14 +128,14 @@ En este módulo no interesa empezar por amenazas muy sofisticadas o improbables.
 
 ### Amenazas típicas
 
-* permisos excesivos o mal solicitados
-* almacenamiento de datos sensibles en claro
-* fuga de información en logs o caché
-* tráfico inseguro o mal validado
-* confianza excesiva en el cliente
-* validaciones críticas hechas fuera del servidor
-* secretos embebidos en el binario
-* información útil para un atacante presente en el ejecutable
+- permisos excesivos o mal solicitados
+- almacenamiento de datos sensibles en claro
+- fuga de información en logs o caché
+- tráfico inseguro o mal validado
+- confianza excesiva en el cliente
+- validaciones críticas hechas fuera del servidor
+- secretos embebidos en el binario
+- información útil para un atacante presente en el ejecutable
 
 Este enfoque desplaza la mirada desde el clásico *“buscar cosas raras”* hacia una revisión más útil: **comprobar capas concretas con criterio**.
 
@@ -147,11 +147,11 @@ Imagina una app de notas personales con inicio de sesión.
 
 La aplicación funciona correctamente. Permite autenticarse, guardar notas y sincronizarlas con un backend. A simple vista, parece una app válida. Sin embargo, al revisarla aparecen estos problemas:
 
-* guarda el token en una preferencia en claro
-* registra en logs el correo del usuario y respuestas del servidor
-* realiza una petición por HTTP en una parte secundaria
-* incluye una URL interna en el binario
-* pide acceso a almacenamiento externo sin necesitarlo
+- guarda el token en una preferencia en claro
+- registra en logs el correo del usuario y respuestas del servidor
+- realiza una petición por HTTP en una parte secundaria
+- incluye una URL interna en el binario
+- pide acceso a almacenamiento externo sin necesitarlo
 
 La app funciona, sí. Pero **no es una app segura**.
 
@@ -165,20 +165,20 @@ Y esa diferencia es precisamente una de las ideas que el alumnado debe aprender 
 
 Una app funcional:
 
-* cumple la tarea esperada
-* responde al usuario
-* puede ofrecer una buena demo
-* no necesariamente protege bien los datos ni la lógica
+- cumple la tarea esperada
+- responde al usuario
+- puede ofrecer una buena demo
+- no necesariamente protege bien los datos ni la lógica
 
 ### Una app segura
 
 Una app segura, además de funcionar:
 
-* minimiza la exposición
-* protege activos sensibles
-* valida correctamente operaciones críticas
-* reduce la superficie de ataque
-* no confía ciegamente en el cliente
+- minimiza la exposición
+- protege activos sensibles
+- valida correctamente operaciones críticas
+- reduce la superficie de ataque
+- no confía ciegamente en el cliente
 
 !!! note "Idea para insistir en clase"
     Conviene repetir esta diferencia con frecuencia, porque muchos estudiantes tienden a valorar más que **la demo vaya bien** que cómo está resuelta por dentro.
@@ -193,19 +193,19 @@ Hay varias ideas equivocadas que aparecen mucho al empezar este bloque.
 
 El cifrado ayuda, pero no corrige por sí solo:
 
-* permisos mal planteados
-* validaciones de negocio mal ubicadas
-* secretos hardcodeados
-* exposición de datos en otras capas
+- permisos mal planteados
+- validaciones de negocio mal ubicadas
+- secretos hardcodeados
+- exposición de datos en otras capas
 
 ### Pensar que usar HTTPS lo resuelve todo
 
 HTTPS protege el canal de comunicación, pero no evita otros problemas como:
 
-* confianza excesiva en el cliente
-* datos expuestos en logs
-* validaciones críticas mal resueltas
-* fugas desde almacenamiento local
+- confianza excesiva en el cliente
+- datos expuestos en logs
+- validaciones críticas mal resueltas
+- fugas desde almacenamiento local
 
 ### Confundir seguridad con aspecto profesional
 
@@ -215,11 +215,11 @@ Que una app tenga una interfaz cuidada, buena navegación o una experiencia puli
 
 No necesariamente. Muchas fugas ocurren precisamente en el dispositivo, por ejemplo en:
 
-* almacenamiento local
-* cachés
-* registros
-* copias de seguridad
-* binarios analizados
+- almacenamiento local
+- cachés
+- registros
+- copias de seguridad
+- binarios analizados
 
 ### Creer que el cliente puede ser fuente de verdad
 
@@ -234,13 +234,13 @@ En operaciones sensibles, como compras, privilegios o acceso a funciones restrin
 
 Cuando el alumnado empiece a auditar una app móvil, este subcapítulo debería dejarle al menos estas preguntas en la cabeza:
 
-* ¿Qué datos sensibles maneja esta app?
-* ¿Dónde los guarda?
-* ¿Por dónde circulan?
-* ¿Qué permisos usa y por qué?
-* ¿Qué operaciones no deberían confiar solo en el cliente?
-* ¿Qué parte del binario puede revelar información útil?
-* ¿Qué decisiones afectan a la confianza entre app y backend?
+- ¿Qué datos sensibles maneja esta app?
+- ¿Dónde los guarda?
+- ¿Por dónde circulan?
+- ¿Qué permisos usa y por qué?
+- ¿Qué operaciones no deberían confiar solo en el cliente?
+- ¿Qué parte del binario puede revelar información útil?
+- ¿Qué decisiones afectan a la confianza entre app y backend?
 
 Si alguien sale de este bloque con estas preguntas, ya no entra al proyecto final a ciegas.
 
@@ -252,11 +252,11 @@ La seguridad en aplicaciones móviles consiste en proteger **datos, operaciones 
 
 No basta con que la app funcione. Una app segura debe:
 
-* controlar bien los permisos
-* proteger el almacenamiento local
-* usar comunicaciones seguras
-* no exponer información sensible en el binario
-* no confiar ciegamente en el cliente para operaciones críticas
+- controlar bien los permisos
+- proteger el almacenamiento local
+- usar comunicaciones seguras
+- no exponer información sensible en el binario
+- no confiar ciegamente en el cliente para operaciones críticas
 
 ---
 

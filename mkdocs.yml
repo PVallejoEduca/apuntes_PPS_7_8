@@ -4,6 +4,9 @@ site_description: Apuntes de seguridad en aplicaciones moviles para el bloque mo
 theme:
   name: material
   language: es
+  font:
+    text: Source Sans 3
+    code: IBM Plex Mono
   features:
     - navigation.tabs
     - navigation.sections
@@ -16,15 +19,15 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: teal
-      accent: indigo
+      primary: blue grey
+      accent: cyan
       toggle:
         icon: material/brightness-7
         name: Cambiar a modo oscuro
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: teal
-      accent: indigo
+      primary: blue grey
+      accent: cyan
       toggle:
         icon: material/brightness-4
         name: Cambiar a modo claro
