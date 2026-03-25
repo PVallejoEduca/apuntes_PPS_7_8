@@ -1,7 +1,4 @@
 
-### `1.2-cliente-sistema-operativo-backend-y-servicios-externos.md`
-
-```md
 # 1.2. Cliente, sistema operativo, backend y servicios externos
 
 No todas las partes de una app hacen lo mismo. Una buena revisión de seguridad empieza por entender qué responsabilidad tiene cada capa y qué errores suelen aparecer en cada una.
