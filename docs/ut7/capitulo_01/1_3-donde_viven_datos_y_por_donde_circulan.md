@@ -1,17 +1,17 @@
 # 1.3. Dónde viven los datos y por dónde circulan
 
-Una de las preguntas más útiles al auditar una app es esta: qué datos maneja, dónde los guarda y por dónde los mueve.
+Una de las preguntas más útiles al auditar una app es esta: qué datos maneja, dónde los guarda y por dónde los mueve. Seguir el recorrido del dato ayuda mucho a detectar riesgos reales.
 
 !!! abstract "Idea clave"
-    Para revisar seguridad hay que saber dónde están los datos en reposo y por dónde viajan en movimiento.
+    Para revisar seguridad hay que saber dónde están los datos en reposo y por dónde viajan cuando están en movimiento.
 
-## Dónde pueden vivir los datos
+---
+
+## Dónde pueden estar los datos
 
 ### En memoria
 
 Mientras la app se está usando.
-
-Ejemplo:
 
 - usuario autenticado
 - token cargado
@@ -19,9 +19,7 @@ Ejemplo:
 
 ### En almacenamiento local
 
-Datos guardados en el dispositivo.
-
-Ejemplo:
+Cuando quedan guardados en el dispositivo.
 
 - preferencias
 - caché
@@ -33,8 +31,6 @@ Ejemplo:
 
 Cuando viajan entre app y backend.
 
-Ejemplo:
-
 - login
 - consulta de datos
 - envío de formularios
@@ -43,9 +39,7 @@ Ejemplo:
 
 ### En servidor
 
-Donde se guardan datos permanentes y se validan operaciones.
-
-Ejemplo:
+Cuando se almacenan y validan de forma centralizada.
 
 - cuentas
 - reservas
@@ -57,30 +51,35 @@ Ejemplo:
 
 Cuando la app usa terceros.
 
-Ejemplo:
-
 - pagos
 - analítica
 - notificaciones
 - almacenamiento externo
 
-## Mapa rápido de circulación
+---
 
-Un dato puede seguir un camino así:
+## Recorrido típico de un dato
 
-1. el usuario introduce email y contraseña
-2. la app envía esos datos al backend
-3. el backend responde con un token
-4. la app guarda ese token localmente
-5. la app usa ese token en nuevas peticiones
+1. el usuario introduce email y contraseña  
+2. la app envía esos datos al backend  
+3. el backend responde con un token  
+4. la app guarda ese token localmente  
+5. la app usa ese token en nuevas peticiones  
 
-Ese camino ya da varias preguntas de auditoría:
+---
 
-- se envía cifrado
-- se guarda en sitio seguro
-- aparece en logs
-- caduca correctamente
-- lo valida el backend
+## Qué preguntas salen de ese recorrido
+
+- ¿se envía cifrado?
+- ¿se guarda en un sitio seguro?
+- ¿aparece en logs?
+- ¿caduca correctamente?
+- ¿lo valida el backend?
+
+!!! tip "Pista de auditoría"
+    Seguir el recorrido de un dato sensible suele revelar más problemas que mirar solo una pantalla o una petición aislada.
+
+---
 
 ## Ejemplo rápido
 
@@ -92,29 +91,25 @@ En una app de compra premium:
 - el backend valida
 - el servidor actualiza el estado premium
 
-Si el paso de validación en servidor falla o no existe, el problema es serio.
+Si la validación en servidor no existe o falla, el problema es serio.
 
-## Error típico
+??? example "Qué no debes hacer"
+    Mirar solo el momento en que el dato se envía.  
+    También importa dónde se guarda antes, dónde queda después y si aparece en caché, logs o binario.
 
-Mirar solo el momento en que el dato se envía.
+---
 
-No. También importa:
+## Error frecuente
 
-- dónde se guarda antes
-- dónde se queda después
-- si aparece en caché o logs
-- si el binario revela algo útil sobre ese flujo
+!!! warning "El riesgo no está solo en el tránsito"
+    Un dato sensible no solo importa cuando viaja.  
+    También importa dónde descansa y quién puede recuperarlo después.
+
+---
 
 ## Qué debes recordar
 
-- un dato sensible no solo importa cuando viaja
-- también importa dónde descansa
-- seguir el recorrido del dato ayuda mucho a auditar
-
-## Imagen sugerida
-
-Aquí vendría muy bien un diagrama de flujo de datos.
-
-Ejemplo visual:
-
-- usuario -> app -> backend -> respuesta -> almacenamiento local
+!!! success "Resumen"
+    - un dato sensible puede pasar por varios sitios
+    - importa tanto el tránsito como el almacenamiento
+    - seguir el recorrido del dato ayuda mucho a auditar

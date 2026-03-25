@@ -1,115 +1,116 @@
+
+### `1.2-cliente-sistema-operativo-backend-y-servicios-externos.md`
+
+```md
 # 1.2. Cliente, sistema operativo, backend y servicios externos
 
-No todas las piezas hacen lo mismo. Entender el papel de cada una ayuda mucho a saber dónde buscar cada problema.
+No todas las partes de una app hacen lo mismo. Una buena revisión de seguridad empieza por entender qué responsabilidad tiene cada capa y qué errores suelen aparecer en cada una.
 
 !!! abstract "Idea clave"
-    En móvil, la seguridad depende de cómo se reparten las responsabilidades entre cliente, sistema operativo, backend y servicios externos.
+    En móvil, la seguridad depende mucho de cómo se reparten las responsabilidades entre cliente, sistema operativo, backend y servicios externos.
 
-## Quién hace qué
+---
 
-| Parte | Qué hace | Qué riesgo puede introducir |
+## Comparación rápida
+
+| Parte | Qué hace | Qué riesgo introduce |
 |---|---|---|
-| Cliente | Muestra la app y ejecuta lógica local | confiar demasiado en el cliente |
-| Sistema operativo | Gestiona permisos, almacenamiento y ejecución | permisos mal usados, exposición del dispositivo |
-| Backend | Valida, guarda y decide operaciones críticas | control de acceso débil, validaciones insuficientes |
-| Servicios externos | notificaciones, mapas, pagos, login externo | dependencia de terceros, mala integración |
+| Cliente | muestra la app y ejecuta lógica local | confiar demasiado en el cliente |
+| Sistema operativo | gestiona permisos, recursos y ejecución | permisos mal usados, exposición del dispositivo |
+| Backend | valida, guarda y decide operaciones críticas | validaciones débiles, control de acceso insuficiente |
+| Servicios externos | añaden funciones como pagos o notificaciones | dependencia de terceros, integración insegura |
+
+---
 
 ## Cliente
 
 Es la app instalada en el móvil.
 
-Hace cosas como:
+Hace tareas como:
 
 - mostrar pantallas
 - recoger datos
-- guardar parte de la sesión
 - lanzar peticiones
-- tomar decisiones de interfaz
+- guardar parte de la sesión
+- controlar la experiencia de uso
 
 Pero no debería decidir cosas críticas por sí sola.
 
-Ejemplo:
+!!! note "Importante"
+    El cliente puede mostrar información y guiar el flujo, pero no debería decidir por sí solo operaciones sensibles.
 
-- sí puede mostrar si una compra parece correcta
-- no debería ser la única que decide si el usuario tiene premium
+---
 
 ## Sistema operativo
 
 Es Android o iOS.
 
-Controla:
+Se encarga de aspectos como:
 
 - permisos
-- acceso a recursos del dispositivo
+- acceso a cámara o ubicación
 - sandbox de la app
 - almacenamiento protegido
 - instalación y ejecución
 
-Aquí aparecen temas clave como:
+Aquí aparecen muchos problemas típicos de móvil, porque la app no vive sola: vive dentro de un entorno con reglas, recursos y límites.
 
-- permisos de cámara o ubicación
-- acceso a archivos
-- datos guardados en el dispositivo
+---
 
 ## Backend
 
 Es el servidor con el que habla la app.
 
-Debería encargarse de:
+Debe encargarse de:
 
 - autenticar
 - autorizar
 - validar operaciones sensibles
-- guardar los datos importantes
+- guardar datos importantes
 - aplicar reglas reales de negocio
 
 !!! tip "Regla útil"
-    Lo importante se confirma en servidor, no solo en el cliente.
+    Lo importante se confirma en servidor, no solo en cliente.
+
+---
 
 ## Servicios externos
 
-Muchas apps no dependen solo de su backend. También usan:
+Muchas apps también dependen de terceros:
 
 - Firebase
 - mapas
-- pasarelas de pago
-- notificaciones push
 - login social
+- pagos
+- notificaciones push
 
-Cada servicio externo añade funcionalidad, pero también añade superficie de ataque y puntos que revisar.
+Cada integración aporta funcionalidad, pero también suma superficie de ataque.
 
-## Ejemplo rápido
+??? example "Ejemplo rápido"
+    En una app de reservas:
+    
+    - el cliente muestra horarios
+    - el sistema operativo concede permiso de notificaciones
+    - el backend valida la reserva
+    - un servicio externo envía el aviso push
 
-En una app de reservas:
+---
 
-- el cliente muestra horarios
-- el sistema operativo concede permiso de notificaciones
-- el backend valida la reserva
-- un servicio externo envía avisos push
+## Error frecuente
 
-## Error típico
+!!! warning "Backend seguro no significa app segura"
+    La app puede seguir fallando si:
+    
+    - pide permisos de más
+    - guarda datos mal
+    - expone información en el binario
+    - confía demasiado en decisiones locales
 
-Pensar que si el backend es seguro, ya está todo bien.
-
-No. La app puede fallar igualmente si:
-
-- pide permisos de más
-- guarda datos mal
-- expone información en el binario
-- confía demasiado en decisiones locales
+---
 
 ## Qué debes recordar
 
-- cliente, sistema operativo y backend no hacen lo mismo
-- la app segura reparte bien responsabilidades
-- el cliente no debe ser la autoridad final en operaciones sensibles
-
-## Imagen sugerida
-
-Aquí encaja muy bien una imagen por capas:
-
-- usuario
-- app cliente
-- sistema operativo
-- backend
-- servicios externos
+!!! success "Resumen"
+    - cliente, sistema operativo y backend no hacen lo mismo
+    - una app segura reparte bien responsabilidades
+    - el cliente no debe ser la autoridad final en operaciones sensibles

@@ -1,45 +1,62 @@
 # 1.1. Componentes básicos de una app móvil
 
-Una app móvil no es solo pantallas. Tiene varias piezas que trabajan juntas y conviene entenderlas antes de auditar permisos, almacenamiento, red o backend.
+Antes de auditar una app conviene verla como un conjunto de piezas, no como una simple colección de pantallas. Si entiendes qué componente hace cada cosa, luego resulta mucho más fácil localizar riesgos.
 
 !!! abstract "Idea clave"
-    Una app móvil suele estar formada por cliente, sistema operativo, almacenamiento, red y backend.
+    Una app móvil combina interfaz, lógica cliente, almacenamiento, red y backend.
+
+---
+
+## Vista rápida
+
+```text
+[ Usuario ]
+     ↓
+[ Interfaz ]
+     ↓
+[ Lógica cliente ] ↔ [ Almacenamiento local ]
+     ↓
+[ Red / API ]
+     ↓
+[ Backend ]
+```
+<figcaption>Figura: esquema básico de componentes de una app móvil.</figcaption> </figure>
 
 ## Piezas principales
 
-### 1. Interfaz
+### Interfaz
 
-Es lo que ve y toca el usuario.
+Es la parte visible de la app.
 
 - pantallas
 - botones
 - formularios
-- menús
 - mensajes
+- navegación visual
 
-### 2. Lógica cliente
+### Lógica cliente
 
-Es lo que decide la app en el dispositivo.
+Es lo que la app decide en el dispositivo.
 
+- control del flujo
 - validaciones básicas
-- navegación
 - gestión de sesión
 - llamadas al backend
-- control del flujo de la app
+- respuesta a acciones del usuario
 
-### 3. Almacenamiento local
+### Almacenamiento local
 
-Es donde la app guarda datos en el móvil.
+Es donde la app guarda información en el móvil.
 
 - preferencias
-- base de datos local
 - caché
+- base de datos local
 - ficheros temporales
-- token o datos de sesión, si está mal diseñada
+- datos de sesión, si están mal ubicados
 
-### 4. Comunicación de red
+### Comunicación de red
 
-Es el canal entre la app y el servidor.
+Es el canal con el servidor.
 
 - peticiones
 - respuestas
@@ -47,44 +64,45 @@ Es el canal entre la app y el servidor.
 - cabeceras
 - datos enviados y recibidos
 
-### 5. Backend
+### Backend
 
 Es la parte que corre en servidor.
 
 - autentica usuarios
-- guarda datos reales
+- guarda datos
 - aplica reglas de negocio
 - valida operaciones sensibles
 - responde a la app
 
+---
+
 ## Ejemplo rápido
 
-Una app de gimnasio puede tener:
+En una app de gimnasio puede ocurrir esto:
 
-- una pantalla para iniciar sesión
-- lógica cliente para pasar de una pantalla a otra
-- un token guardado en el dispositivo
-- peticiones al servidor para ver clases
-- un backend que confirma reservas
+- la interfaz muestra el login
+- la lógica cliente controla la navegación
+- el token se guarda en local
+- la red consulta clases disponibles
+- el backend confirma la reserva
 
-## Error típico
+??? example "Cómo leer este ejemplo"
+    La app parece una sola cosa, pero en realidad cada acción pasa por varias capas.  
+    Ahí es donde luego aparecen riesgos distintos.
 
-Pensar que la app es solo la interfaz.
+---
 
-No. La interfaz es solo una parte. El riesgo puede estar en el almacenamiento, en la red o en cómo se valida algo en servidor.
+## Error frecuente
+
+!!! warning "No reduzcas la app a la pantalla"
+    La interfaz es solo una parte.  
+    El problema real puede estar en el almacenamiento, en la red o en una validación mal resuelta en servidor.
+
+---
 
 ## Qué debes recordar
 
-- una app móvil tiene varias capas
-- no todo pasa en pantalla
-- para auditar bien hay que mirar cliente, dispositivo y backend
-
-## Imagen sugerida
-
-Aquí quedaría muy bien una imagen simple tipo diagrama de bloques:
-
-- móvil
-- interfaz
-- almacenamiento local
-- red
-- backend
+!!! success "Resumen"
+    - una app móvil tiene varias piezas
+    - no todo ocurre en pantalla
+    - para auditar bien hay que mirar cliente, dispositivo y backend
