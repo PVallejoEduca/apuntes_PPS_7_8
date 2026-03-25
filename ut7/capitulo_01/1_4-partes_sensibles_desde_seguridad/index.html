@@ -916,6 +916,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#como-detectarlas-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo detectarlas rápido
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ejemplo-rapido" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -927,21 +938,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#como-pensarlo-en-clase" class="md-nav__link">
+  <a href="#error-frecuente" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cómo pensarlo en clase
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#error-tipico" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Error típico
+        Error frecuente
       
     </span>
   </a>
@@ -953,17 +953,6 @@
     <span class="md-ellipsis">
       
         Qué debes recordar
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#imagen-sugerida" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Imagen sugerida
       
     </span>
   </a>
@@ -5806,6 +5795,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#como-detectarlas-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo detectarlas rápido
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ejemplo-rapido" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5817,21 +5817,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#como-pensarlo-en-clase" class="md-nav__link">
+  <a href="#error-frecuente" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cómo pensarlo en clase
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#error-tipico" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Error típico
+        Error frecuente
       
     </span>
   </a>
@@ -5843,17 +5832,6 @@
     <span class="md-ellipsis">
       
         Qué debes recordar
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#imagen-sugerida" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Imagen sugerida
       
     </span>
   </a>
@@ -5878,11 +5856,12 @@
 
 
 <h1 id="14-que-partes-son-sensibles-desde-el-punto-de-vista-de-seguridad">1.4. Qué partes son sensibles desde el punto de vista de seguridad</h1>
-<p>No todas las partes de una app tienen el mismo riesgo. Algunas zonas son especialmente delicadas y conviene aprender a detectarlas rápido.</p>
+<p>No todas las zonas de una app tienen el mismo riesgo. Algunas merecen prioridad porque un fallo ahí puede exponer datos, romper la lógica o dar acceso indebido.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Idea clave</p>
-<p>Una zona sensible es una parte de la app donde un fallo puede exponer datos, romper la lógica o dar acceso indebido.</p>
+<p>Una zona sensible es una parte de la app donde un fallo tiene más impacto que en el resto.</p>
 </div>
+<hr />
 <h2 id="zonas-especialmente-sensibles">Zonas especialmente sensibles</h2>
 <table>
 <thead>
@@ -5935,6 +5914,7 @@
 </tr>
 </tbody>
 </table>
+<hr />
 <h2 id="prioridad-practica">Prioridad práctica</h2>
 <p>Si una app es pequeña, estas suelen ser las primeras zonas a revisar:</p>
 <ul>
@@ -5943,20 +5923,11 @@
 <li>tráfico</li>
 <li>permisos</li>
 <li>binario</li>
-<li>operaciones sensibles como compras o privilegios</li>
+<li>compras o privilegios</li>
 </ul>
-<h2 id="ejemplo-rapido">Ejemplo rápido</h2>
-<p>Una app parece sencilla, pero:</p>
-<ul>
-<li>el login funciona</li>
-<li>el token se guarda mal</li>
-<li>el tráfico usa HTTPS menos en una petición</li>
-<li>el binario deja ver una URL interna</li>
-<li>la compra premium se acepta desde cliente</li>
-</ul>
-<p>Hay varios problemas, aunque la app vaya bien.</p>
-<h2 id="como-pensarlo-en-clase">Cómo pensarlo en clase</h2>
-<p>Una parte es sensible cuando cumple una de estas condiciones:</p>
+<hr />
+<h2 id="como-detectarlas-rapido">Cómo detectarlas rápido</h2>
+<p>Una parte es sensible cuando cumple alguna de estas condiciones:</p>
 <ul>
 <li>maneja datos privados</li>
 <li>da acceso a recursos del sistema</li>
@@ -5964,9 +5935,27 @@
 <li>comunica con servidor</li>
 <li>deja rastro útil para un atacante</li>
 </ul>
-<h2 id="error-tipico">Error típico</h2>
-<p>Pensar que solo es sensible lo que tiene contraseña.</p>
-<p>No. También lo son:</p>
+<hr />
+<h2 id="ejemplo-rapido">Ejemplo rápido</h2>
+<p>Una app parece sencilla, pero:</p>
+<ul>
+<li>el login funciona</li>
+<li>el token se guarda mal</li>
+<li>una petición usa HTTP</li>
+<li>el binario revela una URL interna</li>
+<li>la compra premium se acepta desde cliente</li>
+</ul>
+<p>La app puede parecer correcta en demo, pero tiene varias zonas delicadas mal resueltas.</p>
+<details class="example">
+<summary>Lectura útil del ejemplo</summary>
+<p>El problema no es una sola pantalla.<br />
+El problema es que varias zonas sensibles concentran decisiones importantes.</p>
+</details>
+<hr />
+<h2 id="error-frecuente">Error frecuente</h2>
+<div class="admonition warning">
+<p class="admonition-title">No solo es sensible lo que tiene contraseña</p>
+<p>También pueden ser sensibles:</p>
 <ul>
 <li>un token</li>
 <li>una URL interna</li>
@@ -5974,22 +5963,17 @@
 <li>un permiso de ubicación</li>
 <li>un log con demasiada información</li>
 </ul>
+</div>
+<hr />
 <h2 id="que-debes-recordar">Qué debes recordar</h2>
+<div class="admonition success">
+<p class="admonition-title">Resumen</p>
 <ul>
 <li>no todas las zonas de una app valen lo mismo</li>
 <li>hay partes especialmente delicadas</li>
-<li>aprender a detectarlas ayuda a priorizar la auditoría</li>
+<li>detectarlas pronto ayuda a priorizar la auditoría</li>
 </ul>
-<h2 id="imagen-sugerida">Imagen sugerida</h2>
-<p>Aquí encaja una imagen tipo mapa de arquitectura con zonas marcadas:</p>
-<ul>
-<li>login</li>
-<li>almacenamiento</li>
-<li>red</li>
-<li>backend</li>
-<li>compra premium</li>
-<li>binario</li>
-</ul>
+</div>
 
 
 
